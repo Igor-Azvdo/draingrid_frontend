@@ -14,7 +14,7 @@ export default function Home() {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          router.push("/link2");
+          router.push("/links");
           return 0;
         }
         return prev - 1;
@@ -50,7 +50,7 @@ export default function Home() {
             </span>
           </p>
           <a
-            href="/link2"
+            href="/links"
             className="mt-2 text-sm text-primary-dark/60 hover:text-primary-dark underline underline-offset-4 transition-colors"
           >
             Ir para os links agora

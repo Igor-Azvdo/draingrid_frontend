@@ -12,12 +12,12 @@ export const siteConfig = {
   links: [
     {
       label: "Cannabis Medicinal",
-      url: "https://wa.me/5500000000000",
+      url: "https://wa.me/5511985827582",
       icon: "whatsapp" as const,
     },
     {
       label: "Odontologia - João Pessoa",
-      url: "https://wa.me/5500000000000",
+      url: "https://wa.me/5583987819876",
       icon: "whatsapp" as const,
     },
     {
