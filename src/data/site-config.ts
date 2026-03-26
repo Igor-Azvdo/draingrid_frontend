@@ -1,5 +1,6 @@
 export interface LinkItem {
   label: string;
+  subtitle?: string;
   url: string;
   icon: "whatsapp" | "instagram" | "website";
   disabled?: boolean;
@@ -16,7 +17,8 @@ export const siteConfig = {
       icon: "whatsapp" as const,
     },
     {
-      label: "Odontologia - João Pessoa",
+      label: "Odontologia",
+      subtitle: "João Pessoa",
       url: "https://wa.me/5583987819876",
       icon: "whatsapp" as const,
     },

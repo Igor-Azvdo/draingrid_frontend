@@ -84,9 +84,14 @@ export function LinkCard({ link }: { link: LinkItem }) {
       >
         {icons[link.icon]}
       </span>
-      <span className="text-text font-semibold text-lg group-hover:text-primary-dark transition-colors duration-300">
-        {link.label}
-      </span>
+      <div className="flex flex-col">
+        <span className="text-text font-semibold text-lg group-hover:text-primary-dark transition-colors duration-300">
+          {link.label}
+        </span>
+        {link.subtitle && (
+          <span className="text-text/50 text-sm font-medium">{link.subtitle}</span>
+        )}
+      </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
