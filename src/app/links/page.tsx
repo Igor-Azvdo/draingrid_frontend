@@ -6,7 +6,7 @@ export default function Link2() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* Hero image with fade - mobile only */}
-      <div className="relative w-full h-[45vh] sm:h-[50vh] shrink-0 md:hidden">
+      <div className="relative w-full h-[35vh] sm:h-[50vh] shrink-0 md:hidden">
         <Image
           src="/hero.jpg"
           alt="Dra Ingrid Azevedo"
@@ -18,7 +18,7 @@ export default function Link2() {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col items-center flex-1 px-5 -mt-20 md:mt-16 relative z-10">
+      <div className="flex flex-col items-center flex-1 px-5 -mt-10 sm:-mt-20 md:mt-16 relative z-10">
         <div className="w-full max-w-lg flex flex-col items-center gap-6">
           {/* Name + Description */}
           <div className="flex flex-col items-center text-center animate-fade-up">
