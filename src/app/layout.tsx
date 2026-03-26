@@ -5,6 +5,9 @@ import "./globals.css";
 const nunito = Nunito({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.svg",
+  },
   title: "Dra Ingrid Azevedo | Cannabis Medicinal e Odontologia",
   description:
     "Dra Ingrid Azevedo - Cirurgiã Dentista e especialista em Cannabis Medicinal. Ajudo você a viver melhor, aliviar a dor e dormir bem de forma natural e segura. Atendimento online e presencial em João Pessoa.",
