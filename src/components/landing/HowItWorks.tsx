@@ -8,34 +8,38 @@ export function HowItWorks() {
   const ref = useScrollAnimation();
 
   return (
-    <section id="como-funciona" className="py-24 md:py-32 bg-bg-cream">
+    <section id="como-funciona" className="py-20 md:py-28 bg-bg-warm">
       <Container>
         <div ref={ref} className="scroll-fade-in">
-          <p className="text-accent uppercase tracking-[0.2em] text-xs font-semibold text-center mb-4">
-            Protocolo
-          </p>
-          <h2 className="font-display text-3xl md:text-[2.75rem] font-bold text-text text-center mb-20 leading-tight">
+          <h2 className="text-3xl md:text-[2.75rem] font-extrabold text-text text-center mb-16">
             {stepsContent.title}
           </h2>
+          <div className="relative max-w-2xl mx-auto">
+            {/* Vertical line */}
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary-light/40 -translate-x-1/2" />
 
-          {/* Steps — clean numbered list */}
-          <div className="max-w-3xl mx-auto">
             {stepsContent.steps.map((step, i) => (
               <div
                 key={step.number}
-                className={`flex items-start gap-8 md:gap-12 ${i < stepsContent.steps.length - 1 ? "mb-12 pb-12 border-b border-black/[0.04]" : ""}`}
+                className={`relative flex items-start gap-6 mb-12 last:mb-0 md:gap-12 ${
+                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
               >
-                {/* Number */}
-                <span className="font-display text-5xl md:text-6xl font-bold text-accent/30 leading-none shrink-0 -mt-1">
-                  {String(step.number).padStart(2, "0")}
-                </span>
+                {/* Number circle */}
+                <div className="shrink-0 w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-extrabold text-lg z-10 md:absolute md:left-1/2 md:-translate-x-1/2">
+                  {step.number}
+                </div>
 
                 {/* Content */}
-                <div className="flex-1">
-                  <h3 className="text-lg md:text-xl font-bold text-text mb-2">
+                <div
+                  className={`flex-1 ml-4 md:ml-0 bg-white rounded-2xl border border-card-border p-6 shadow-sm md:w-[calc(50%-3rem)] ${
+                    i % 2 === 0 ? "md:mr-auto md:text-right" : "md:ml-auto md:text-left"
+                  }`}
+                >
+                  <h3 className="text-lg font-bold text-hero-dark mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-text/50 leading-[1.8] text-[0.9375rem]">
+                  <p className="text-text/70 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
