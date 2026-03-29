@@ -4,7 +4,7 @@ import { heroContent } from "@/data/landing-content";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden noise-overlay">
       {/* Background images — mobile vs desktop */}
       <div
         className="absolute inset-0 bg-cover bg-center md:hidden"
@@ -15,30 +15,47 @@ export function Hero() {
         style={{ backgroundImage: "url('/hero-desktop.jpg')" }}
       />
 
-      {/* Overlay — uniform on mobile, lateral gradient on desktop */}
-      <div className="absolute inset-0 bg-hero-dark/80 md:bg-transparent">
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-hero-dark/90 via-hero-dark/60 to-transparent" />
+      {/* Dark overlay with atmosphere */}
+      <div className="absolute inset-0 bg-hero-dark/85 md:bg-transparent">
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-hero-dark/95 via-hero-dark/75 to-hero-dark/30" />
       </div>
 
+      {/* Decorative gradient glow */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-hero-dark to-transparent z-[2]" />
+      <div className="absolute top-1/3 left-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+
       {/* Content */}
-      <Container className="relative z-10 pt-24 pb-16 md:pt-32 md:pb-24">
+      <Container className="relative z-10 pt-28 pb-20 md:pt-36 md:pb-32">
         <div className="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
-          <h1 className="text-[2.5rem] leading-tight md:text-[3.5rem] md:leading-tight font-extrabold text-white mb-6">
+          {/* Eyebrow */}
+          <p className="text-accent uppercase tracking-[0.2em] text-xs md:text-sm font-semibold mb-6 animate-fade-up">
+            Prescritora Canabica &middot; ANVISA
+          </p>
+
+          <h1 className="font-display text-[2.25rem] leading-[1.15] md:text-[3.75rem] md:leading-[1.1] font-bold text-white mb-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
             {heroContent.title}
           </h1>
-          <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
+
+          <p className="text-white/60 text-base md:text-lg leading-[1.9] mb-10 max-w-xl animate-fade-up" style={{ animationDelay: "200ms" }}>
             {heroContent.description}
           </p>
-          <WhatsAppButton variant="primary" className="mb-6">
-            {heroContent.cta}
-          </WhatsAppButton>
-          <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
-            {heroContent.badges.map((badge) => (
+
+          <div className="animate-fade-up" style={{ animationDelay: "300ms" }}>
+            <WhatsAppButton variant="gold" className="mb-8">
+              {heroContent.cta}
+            </WhatsAppButton>
+          </div>
+
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 animate-fade-up" style={{ animationDelay: "400ms" }}>
+            {heroContent.badges.map((badge, i) => (
               <span
                 key={badge}
-                className="text-sm font-semibold text-white/70 bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/10"
+                className="text-[0.75rem] font-medium text-white/40 uppercase tracking-[0.1em] border-b border-white/10 pb-0.5"
               >
                 {badge}
+                {i < heroContent.badges.length - 1 && (
+                  <span className="ml-3 text-accent/40">&middot;</span>
+                )}
               </span>
             ))}
           </div>
