@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"], style: ["normal", "italic"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
   icons: {
@@ -47,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={nunito.className}>
+    <html lang="pt-BR" className={`${nunito.className} ${playfair.variable}`}>
       <body className="text-text antialiased">{children}</body>
     </html>
   );
