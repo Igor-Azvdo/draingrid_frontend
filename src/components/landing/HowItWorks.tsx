@@ -1,20 +1,29 @@
 import { Container } from "./Container";
+import { WhatsAppButton } from "./WhatsAppButton";
 import { stepsContent } from "@/data/landing-content";
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-24 bg-white scroll-mt-24">
+    <section id="como-funciona" className="pt-16 pb-24 bg-white scroll-mt-24">
       <Container>
-        <div className="flex flex-col items-center text-center mb-20">
-          <div className="inline-block px-5 py-2 rounded-full border border-card-border bg-bg text-xs font-bold tracking-widest uppercase text-primary-dark mb-6">
-            Passo a passo
+        {/* Header: texto à esquerda, botão à direita */}
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-16">
+          <div>
+            <div className="inline-block px-5 py-2 rounded-full border border-card-border bg-bg text-xs font-bold tracking-widest uppercase text-primary-dark mb-6">
+              Passo a passo
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-text mb-4">
+              Como <span className="text-highlight">funciona</span>
+            </h2>
+            <p className="text-text/50 text-lg max-w-xl">
+              Do primeiro contato ao resultado — cada etapa pensada para você.
+            </p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-text mb-6">
-            Como <span className="text-highlight">funciona</span>
-          </h2>
-          <p className="text-text/50 text-lg max-w-xl">
-            Do primeiro contato ao resultado — cada etapa pensada para você.
-          </p>
+          <div className="shrink-0">
+            <WhatsAppButton variant="green">
+              Agendar minha consulta
+            </WhatsAppButton>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">

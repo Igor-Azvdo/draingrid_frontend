@@ -50,12 +50,22 @@ export function Plans() {
                 {plan.duration}
               </p>
               <p
-                className={`text-sm mb-3 ${
+                className={`text-sm mb-6 ${
                   plan.highlighted ? "text-white/60" : "text-text/50"
                 }`}
               >
                 {plan.audience}
               </p>
+              <ul className={`space-y-3 mb-6 ${plan.highlighted ? "text-white/80" : "text-text/70"}`}>
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2.5 text-sm">
+                    <svg className={`w-4 h-4 shrink-0 ${plan.highlighted ? "text-primary-light" : "text-primary-dark"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
               <p
                 className={`text-sm font-medium mt-auto pt-4 border-t ${
                   plan.highlighted

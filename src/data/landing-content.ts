@@ -11,12 +11,12 @@ export const heroContent = {
 export const painPoints = {
   title: "Você se reconhece aqui?",
   items: [
-    { icon: "moon", text: "Acorda às 3h e não dorme mais" },
-    { icon: "jaw", text: "Mandíbula travada toda manhã" },
-    { icon: "pill", text: "Toma remédio para dormir e ainda acorda cansado" },
-    { icon: "repeat", text: "Já fez placa de bruxismo, botox, ansiolítico — e continua igual" },
-    { icon: "search", text: "Tem dores que os exames não encontram" },
-    { icon: "stack", text: "Está em polimedicação e se sentindo cada vez pior" },
+    { icon: "moon", text: "Acorda às 3h e não dorme mais", image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" },
+    { icon: "jaw", text: "Mandíbula travada toda manhã", image: "https://images.unsplash.com/photo-1616091216791-a5360b5fc78a?auto=format&fit=crop&w=600&q=80" },
+    { icon: "pill", text: "Toma remédio para dormir e ainda acorda cansado", image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" },
+    { icon: "repeat", text: "Já fez placa de bruxismo, botox, ansiolítico — e continua igual", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" },
+    { icon: "search", text: "Tem dores que os exames não encontram", image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80" },
+    { icon: "stack", text: "Está em polimedicação e se sentindo cada vez pior", image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=600&q=80" },
   ],
   closing:
     "Se sim: você não é um caso sem solução. Você é um caso sem o protocolo certo.",
@@ -143,7 +143,7 @@ export const faqContent = {
         "O risco de dependência em protocolos clínicos bem conduzidos é significativamente menor do que o de benzodiazepínicos e opioides que já estão na farmácia de muita gente.",
     },
     {
-      question: "Vou ficar \"alto\"?",
+      question: "Vou ficar \"chapado\"?",
       answer:
         "Não, se o protocolo for bem conduzido. Efeito psicoativo ocorre com doses altas de THC. Em protocolos terapêuticos, as proporções e doses são calibradas para que você sinta o benefício — não o efeito inebriante.",
     },
@@ -174,20 +174,15 @@ export const plansContent = {
       duration: "1 mês",
       audience: "Quem quer começar com segurança",
       includes: "Consulta + 4 encontros semanais",
+      features: ["Acompanhamento semanal", "Renovação da receita"],
       highlighted: false,
     },
-    // {
-    //   name: "Essencial",
-    //   duration: "4 meses",
-    //   audience: "Dor crônica, insônia, ansiedade",
-    //   includes: "Sessões mensais + suporte",
-    //   highlighted: false,
-    // },
     {
       name: "Completo",
       duration: "6 meses",
       audience: "TEA, fibromialgia, desmame",
       includes: "Protocolo completo + prioridade",
+      features: ["Tudo do plano Base", "Até 3 consultas inclusas", "Acompanhamento semanal", "Renovação da receita"],
       highlighted: true,
     },
     {
@@ -195,6 +190,7 @@ export const plansContent = {
       duration: "1 ano",
       audience: "Condições complexas e crônicas",
       includes: "Revisões trimestrais + ajustes sazonais",
+      features: ["Tudo do plano Completo", "Até 6 consultas inclusas", "Acompanhamento semanal", "Renovação da receita"],
       highlighted: false,
     },
   ],

@@ -48,7 +48,7 @@ export function Header() {
               alt="Dra. Ingrid Azevedo"
               width={110}
               height={64}
-              className="h-10 w-auto transition-all duration-300"
+              className="h-14 w-auto transition-all duration-300"
               unoptimized
             />
           </a>

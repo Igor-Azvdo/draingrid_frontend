@@ -4,9 +4,9 @@ import { cannabisContent } from "@/data/landing-content";
 
 export function WhatIsCannabis() {
   return (
-    <section className="py-24 bg-white scroll-mt-24">
+    <section className="pt-24 pb-0 bg-white scroll-mt-24">
       <Container>
-        <div className="flex flex-col md:flex-row items-stretch gap-16">
+        <div className="flex flex-col md:flex-row-reverse items-stretch gap-16">
           {/* Image */}
           <div className="w-full md:w-5/12">
             <div className="h-full rounded-[3rem] overflow-hidden shadow-2xl relative border-8 border-white">

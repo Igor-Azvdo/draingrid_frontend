@@ -26,7 +26,7 @@ export function Hero() {
               Prescritora Canábica ANVISA
             </div>
 
-            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold leading-[1.12] tracking-tight text-text">
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-[1.08] tracking-tight text-text">
               {heroContent.title}
             </h1>
 

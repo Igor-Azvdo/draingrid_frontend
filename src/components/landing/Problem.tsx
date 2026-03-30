@@ -9,10 +9,13 @@ export function Problem() {
           <div className="inline-block px-5 py-2 rounded-full border border-card-border bg-white text-xs font-bold tracking-widest uppercase text-primary-dark mb-6">
             Tratamento Individualizado
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-text leading-tight mb-4">
-            {problemContent.title}
+          <h2 className="text-xl md:text-2xl font-semibold text-text/70 leading-snug mb-4">
+            {problemContent.title}{" "}
+            <span className="hidden md:inline text-4xl md:text-6xl font-extrabold text-text">
+              Mas você <span className="text-highlight">não é uma bula.</span>
+            </span>
           </h2>
-          <p className="text-3xl md:text-4xl font-extrabold text-text mb-10">
+          <p className="text-4xl font-extrabold text-text mb-10 md:hidden">
             Mas você <span className="text-highlight">não é uma bula.</span>
           </p>
           {problemContent.body.split("\n\n").map((paragraph, i) => (

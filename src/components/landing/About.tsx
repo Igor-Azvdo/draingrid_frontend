@@ -70,7 +70,7 @@ export function About() {
                 </div>
               ))}
             </div>
-            <WhatsAppButton variant="outline">
+            <WhatsAppButton variant="green">
               Agendar minha consulta
             </WhatsAppButton>
           </div>
