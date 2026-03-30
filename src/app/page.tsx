@@ -23,8 +23,8 @@ export default function Home() {
         <PainPoints />
         <Problem />
         <WhatIsCannabis />
-        <About />
         <HowItWorks />
+        <About />
         <Conditions />
         <Testimonials />
         <FAQ />

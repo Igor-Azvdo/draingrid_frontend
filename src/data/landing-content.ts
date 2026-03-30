@@ -39,12 +39,10 @@ export const cannabisContent = {
     { title: "Regulamentada ANVISA", description: "Desde 2019, com receita médica e acesso em farmácias autorizadas." },
     { title: "Sistema Endocanabinoide", description: "Seu corpo já possui este sistema, projetado para regular dor, sono e humor." },
   ],
-  faithNote:
-    "Para quem tem fé: a Igreja Adventista do Sétimo Dia, da qual faço parte, compreende a cannabis medicinal como uma medicina criada por Deus com propósito terapêutico. Usar o que a criação oferece para cuidar do corpo não é contradição — é coerência.",
 };
 
 export const aboutContent = {
-  title: "Quem sou eu",
+  title: "Dra. Ingrid Azevedo",
   paragraphs: [
     "Antes de ser prescritora, fui paciente.",
     "Passei por estresse pós-traumático que me deixou ansiosa, deprimida e travada. A cannabis medicinal me devolveu o volante da minha própria vida. Só depois disso abri a porta para os meus pacientes — porque eu sei, de dentro, o que significa ter a dose certa. E o que significa não ter.",
@@ -137,7 +135,7 @@ export const testimonialsContent = {
 };
 
 export const faqContent = {
-  title: "Suas dúvidas",
+  title: "Dúvidas frequentes",
   items: [
     {
       question: "Vicia?",
@@ -178,13 +176,13 @@ export const plansContent = {
       includes: "Consulta + 4 encontros semanais",
       highlighted: false,
     },
-    {
-      name: "Essencial",
-      duration: "4 meses",
-      audience: "Dor crônica, insônia, ansiedade",
-      includes: "Sessões mensais + suporte",
-      highlighted: false,
-    },
+    // {
+    //   name: "Essencial",
+    //   duration: "4 meses",
+    //   audience: "Dor crônica, insônia, ansiedade",
+    //   includes: "Sessões mensais + suporte",
+    //   highlighted: false,
+    // },
     {
       name: "Completo",
       duration: "6 meses",

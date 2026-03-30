@@ -1,26 +1,24 @@
-"use client";
-
 import { Container } from "./Container";
 import { problemContent } from "@/data/landing-content";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function Problem() {
-  const ref = useScrollAnimation();
-
   return (
-    <section className="py-20 md:py-28 bg-bg-sage">
+    <section className="py-24 bg-section-green-soft md:rounded-[4rem] mx-0 md:mx-6 mb-6 scroll-mt-24">
       <Container>
-        <div ref={ref} className="scroll-fade-in max-w-[680px] mx-auto text-center">
-          <h2 className="text-2xl md:text-[2.25rem] font-extrabold text-text leading-snug mb-4">
+        <div className="max-w-[720px] mx-auto text-center">
+          <div className="inline-block px-5 py-2 rounded-full border border-card-border bg-white text-xs font-bold tracking-widest uppercase text-primary-dark mb-6">
+            Tratamento Individualizado
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-text leading-tight mb-4">
             {problemContent.title}
           </h2>
-          <p className="text-3xl md:text-[2.75rem] font-extrabold text-hero-dark mb-8">
-            {problemContent.highlight}
+          <p className="text-3xl md:text-4xl font-extrabold text-text mb-10">
+            Mas você <span className="text-highlight">não é uma bula.</span>
           </p>
           {problemContent.body.split("\n\n").map((paragraph, i) => (
             <p
               key={i}
-              className="text-text/80 text-lg leading-[1.8] mb-4 last:mb-0"
+              className="text-text/60 text-lg leading-[1.8] mb-4 last:mb-0 font-light"
             >
               {paragraph}
             </p>

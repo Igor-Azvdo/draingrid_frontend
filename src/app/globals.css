@@ -6,123 +6,55 @@
   --color-primary-light: #8FBF96;
   --color-primary-dark: #4A7D52;
   --color-bg: #F0F7F1;
-  --color-bg-warm: #FAF6F0;
+  --color-bg-warm: #F5F5F5;
   --color-text: #1A2B20;
   --color-card-bg: rgba(255, 255, 255, 0.7);
   --color-card-border: rgba(122, 182, 130, 0.2);
   --color-card-hover: rgba(168, 213, 174, 0.3);
   --color-card-shadow: rgba(90, 158, 97, 0.08);
 
-  /* ── Premium dark palette ── */
+  /* ── Premium palette ── */
   --color-hero-dark: #0D1F17;
   --color-hero-darker: #080F0B;
   --color-surface-dark: #0F261B;
   --color-surface-dark-alt: #122D1F;
-  --color-bg-sage: #EDE8E0;
-  --color-bg-cream: #FAF6F0;
+  --color-bg-sage: #EBEBEB;
+  --color-bg-cream: #F7F7F7;
 
-  /* ── Accent: champagne gold ── */
+  /* ── Light green sections ── */
+  --color-section-green: #E0F0E3;
+  --color-section-green-deep: #D2E5D6;
+  --color-section-green-soft: #EBF5ED;
+
+  /* ── Accent ── */
   --color-accent: #C9A96E;
   --color-accent-light: #D4BA85;
   --color-accent-muted: rgba(201, 169, 110, 0.15);
 
-  /* ── Glass ── */
-  --color-glass-light: rgba(255, 255, 255, 0.06);
-  --color-glass-border: rgba(255, 255, 255, 0.08);
-  --color-glass-border-hover: rgba(201, 169, 110, 0.25);
+  /* ── Border radius ── */
+  --radius-4xl: 2.5rem;
 }
 
 body {
-  background: var(--color-bg-cream);
+  background: white;
   min-height: 100vh;
+  font-family: var(--font-body), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+button, a, span.font-semibold, span.font-bold, span.font-extrabold {
+  font-family: var(--font-urbanist), sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  .scroll-fade-in,
-  .scroll-fade-in-up,
-  .scroll-fade-in-left,
-  .scroll-fade-in-right {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
+/* ── Highlighted text ── */
+.text-highlight {
+  color: var(--color-primary-dark);
 }
 
-/* ── Animations ── */
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-up {
-  animation: fade-up 0.6s ease-out both;
-}
-
-/* Scroll-triggered */
-.scroll-fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.scroll-fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Stagger children */
-.stagger-children > * {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.stagger-children.visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
-.stagger-children.visible > *:nth-child(2) { transition-delay: 80ms; opacity: 1; transform: translateY(0); }
-.stagger-children.visible > *:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
-.stagger-children.visible > *:nth-child(4) { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
-.stagger-children.visible > *:nth-child(5) { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
-.stagger-children.visible > *:nth-child(6) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
-
-/* ── Decorative ── */
-.section-divider {
-  position: relative;
-}
-
-.section-divider::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: var(--color-accent);
-  margin: 0 auto;
-}
-
-/* Noise texture overlay */
-.noise-overlay::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Serif font class */
-.font-display {
-  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
+.text-highlight-dark {
+  color: var(--color-primary-dark);
 }

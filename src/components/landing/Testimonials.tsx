@@ -1,46 +1,57 @@
-"use client";
-
 import { Container } from "./Container";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { testimonialsContent } from "@/data/landing-content";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function Testimonials() {
-  const ref = useScrollAnimation();
-
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-24 bg-white scroll-mt-24">
       <Container>
-        <div ref={ref} className="scroll-fade-in">
-          <h2 className="text-3xl md:text-[2.75rem] font-extrabold text-text text-center mb-12">
-            {testimonialsContent.title}
+        <div className="flex flex-col items-center text-center mb-16 gap-6">
+          <div className="inline-block px-4 py-1.5 rounded-full border border-card-border bg-bg text-[10px] font-bold tracking-[0.2em] uppercase text-primary-dark">
+            Resultados reais
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-text leading-tight">
+            O que <span className="text-highlight">muda</span> na vida de quem{" "}
+            <br className="hidden md:block" />
+            <span className="italic font-light text-text/40">
+              passa pelo protocolo
+            </span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonialsContent.items.map((item, i) => (
-              <div
-                key={i}
-                className="bg-bg-warm rounded-2xl border border-card-border p-6 md:p-8 flex flex-col"
-              >
-                <span className="text-5xl text-primary/30 font-serif leading-none mb-2">
-                  &ldquo;
-                </span>
-                <h3 className="text-lg font-bold text-accent mb-3">
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonialsContent.items.map((item, i) => (
+            <div
+              key={i}
+              className="bg-bg p-12 rounded-[3rem] hover:bg-section-green-soft transition-all duration-500 group cursor-default hover:shadow-xl"
+            >
+              <div className="mb-8">
+                <div className="flex gap-1 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <span key={star} className="text-primary-dark text-xs">
+                      ★
+                    </span>
+                  ))}
+                </div>
+                <p className="font-bold text-text text-lg mb-1">
                   {item.headline}
-                </h3>
-                <p className="text-text/70 leading-relaxed flex-1">
-                  {item.body}
                 </p>
               </div>
-            ))}
-          </div>
-          <p className="mt-6 text-center text-sm text-text/40 italic">
-            {testimonialsContent.disclaimer}
-          </p>
-          <div className="mt-10 text-center">
-            <WhatsAppButton variant="primary">
-              Agendar minha consulta
-            </WhatsAppButton>
-          </div>
+              <p className="text-text/50 text-lg leading-relaxed italic">
+                &ldquo;{item.body}&rdquo;
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 text-center text-sm text-text/30 italic">
+          {testimonialsContent.disclaimer}
+        </p>
+
+        <div className="mt-10 text-center">
+          <WhatsAppButton variant="green">
+            Agendar minha consulta
+          </WhatsAppButton>
         </div>
       </Container>
     </section>

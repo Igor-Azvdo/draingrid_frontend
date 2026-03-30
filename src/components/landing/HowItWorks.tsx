@@ -1,51 +1,42 @@
-"use client";
-
 import { Container } from "./Container";
 import { stepsContent } from "@/data/landing-content";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function HowItWorks() {
-  const ref = useScrollAnimation();
-
   return (
-    <section id="como-funciona" className="py-20 md:py-28 bg-bg-warm">
+    <section id="como-funciona" className="py-24 bg-white scroll-mt-24">
       <Container>
-        <div ref={ref} className="scroll-fade-in">
-          <h2 className="text-3xl md:text-[2.75rem] font-extrabold text-text text-center mb-16">
-            {stepsContent.title}
+        <div className="flex flex-col items-center text-center mb-20">
+          <div className="inline-block px-5 py-2 rounded-full border border-card-border bg-bg text-xs font-bold tracking-widest uppercase text-primary-dark mb-6">
+            Passo a passo
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-text mb-6">
+            Como <span className="text-highlight">funciona</span>
           </h2>
-          <div className="relative max-w-2xl mx-auto">
-            {/* Vertical line */}
-            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary-light/40 -translate-x-1/2" />
+          <p className="text-text/50 text-lg max-w-xl">
+            Do primeiro contato ao resultado — cada etapa pensada para você.
+          </p>
+        </div>
 
-            {stepsContent.steps.map((step, i) => (
-              <div
-                key={step.number}
-                className={`relative flex items-start gap-6 mb-12 last:mb-0 md:gap-12 ${
-                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              >
-                {/* Number circle */}
-                <div className="shrink-0 w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-extrabold text-lg z-10 md:absolute md:left-1/2 md:-translate-x-1/2">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {stepsContent.steps.map((step) => (
+            <div
+              key={step.number}
+              className="group relative bg-bg rounded-[2rem] p-8 text-center transition-all duration-500 hover:bg-primary-dark hover:text-white hover:shadow-2xl hover:scale-[1.02]"
+            >
+              <div className="absolute top-4 right-6 text-[80px] font-extrabold text-primary/5 leading-none group-hover:text-white/10 transition-colors">
+                {step.number}
+              </div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded-xl bg-white border border-card-border flex items-center justify-center text-primary-dark font-extrabold text-lg mx-auto mb-5 group-hover:bg-white/20 group-hover:border-white/20 group-hover:text-white transition-all">
                   {step.number}
                 </div>
-
-                {/* Content */}
-                <div
-                  className={`flex-1 ml-4 md:ml-0 bg-white rounded-2xl border border-card-border p-6 shadow-sm md:w-[calc(50%-3rem)] ${
-                    i % 2 === 0 ? "md:mr-auto md:text-right" : "md:ml-auto md:text-left"
-                  }`}
-                >
-                  <h3 className="text-lg font-bold text-hero-dark mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-text/70 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
+                <h3 className="text-base font-bold mb-2">{step.title}</h3>
+                <p className="text-text/50 leading-relaxed text-sm group-hover:text-white/70 transition-colors">
+                  {step.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </Container>
     </section>
