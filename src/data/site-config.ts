@@ -24,10 +24,8 @@ export const siteConfig = {
     },
     {
       label: "Website",
-      url: "#",
+      url: "/",
       icon: "website" as const,
-      disabled: true,
-      disclaimer: "Em breve",
     },
   ] satisfies LinkItem[],
 };

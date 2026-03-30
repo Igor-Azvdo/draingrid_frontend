@@ -19,14 +19,14 @@ export function Hero() {
       />
 
       {/* Content */}
-      <Container className="relative z-10 pt-40 pb-16 md:pt-32 md:pb-24">
+      <Container className="relative z-10 pt-64 pb-16 md:pt-60 md:pb-24">
         <div className="md:w-1/2">
           <div className="text-center md:text-left space-y-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full border border-text/15 bg-white/60 backdrop-blur-sm text-[10px] font-bold tracking-[0.2em] uppercase text-text">
               Prescritora Canábica ANVISA
             </div>
 
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-[1.08] tracking-tight text-text">
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-[1.08] tracking-tight text-text drop-shadow-[0_8px_60px_rgba(255,255,255,1)]">
               {heroContent.title}
             </h1>
 
