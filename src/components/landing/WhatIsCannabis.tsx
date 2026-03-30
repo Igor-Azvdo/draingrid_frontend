@@ -11,7 +11,7 @@ export function WhatIsCannabis() {
           <div className="w-full md:w-5/12">
             <div className="h-full rounded-[3rem] overflow-hidden shadow-2xl relative border-8 border-white">
               <Image
-                src="/cannabis-medicinal.jpg"
+                src="/hero.jpg"
                 alt="Cannabis Medicinal"
                 width={600}
                 height={700}
