@@ -5,25 +5,26 @@ import { heroContent } from "@/data/landing-content";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background images — mobile vs desktop */}
-      <div
-        className="absolute inset-0 bg-cover md:hidden"
-        style={{
-          backgroundImage: "url('/herobglpmobile.jpg')",
-          backgroundPosition: "center top",
-        }}
-      />
-      <div
-        className="absolute inset-0 bg-cover bg-center hidden md:block"
-        style={{ backgroundImage: "url('/herobglp.jpg')" }}
-      />
+      {/* Background images — mobile vs desktop (LCP-optimized) */}
+      <picture className="absolute inset-0 block">
+        <source media="(min-width: 768px)" srcSet="/herobglp.jpg" />
+        <img
+          src="/herobglpmobile.jpg"
+          alt="Dra. Ingrid Azevedo, dentista e prescritora canábica habilitada pela ANVISA"
+          className="absolute inset-0 w-full h-full object-cover object-[center_top] md:object-center"
+          loading="eager"
+          decoding="async"
+          // @ts-expect-error fetchpriority is valid HTML
+          fetchpriority="high"
+        />
+      </picture>
 
       {/* Content */}
       <Container className="relative z-10 pt-64 pb-16 md:pt-60 md:pb-24">
         <div className="md:w-1/2">
           <div className="text-center md:text-left space-y-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full border border-text/15 bg-white/60 backdrop-blur-sm text-[10px] font-bold tracking-[0.2em] uppercase text-text">
-              Prescritora Canábica ANVISA
+              Cannabis Medicinal Online · Prescrição ANVISA
             </div>
 
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-[1.08] tracking-tight text-text drop-shadow-[0_8px_60px_rgba(255,255,255,1)]">
