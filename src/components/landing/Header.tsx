@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { navLinks, WHATSAPP_URL } from "@/data/landing-content";
+import { Container } from "./Container";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +34,7 @@ export function Header() {
             : "py-5 md:py-6 bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        <Container className="flex justify-between items-center">
           {/* Logo */}
           <a
             href="#"
@@ -151,7 +152,7 @@ export function Header() {
               </svg>
             )}
           </button>
-        </div>
+        </Container>
       </nav>
 
       {/* Mobile Overlay */}
