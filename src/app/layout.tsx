@@ -175,6 +175,10 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/herobglp.jpg" media="(min-width: 768px)" fetchPriority="high" />
         <link rel="preload" as="image" href="/herobglpmobile.jpg" media="(max-width: 767px)" fetchPriority="high" />
         <script
+          async
+          src="https://api.clinicweed.proximosite.com.br/api/tracking/script/clw_8fc17d6d58311b45e5813d531bc2fb5f.js"
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
         />
