@@ -10,9 +10,7 @@ export function Footer() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Olá, Dra. Ingrid! Meu nome é ${name}. Gostaria de agendar uma consulta.`;
-    const url = `https://wa.me/5511985827582?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
+    window.open(WHATSAPP_URL, "_blank");
   };
 
   return (

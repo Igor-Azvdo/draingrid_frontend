@@ -1,4 +1,4 @@
-export const WHATSAPP_URL = "https://wa.me/5511985827582?text=Ol%C3%A1%2C%20Dra.%20Ingrid!%20Gostaria%20de%20agendar%20uma%20consulta.";
+export const WHATSAPP_URL = "https://app.clinicweed.com.br/r/df902d7c";
 
 export const heroContent = {
   title: "A dose certa muda tudo. Eu te ajudo a encontrá-la.",
