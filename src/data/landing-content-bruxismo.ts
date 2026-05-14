@@ -95,12 +95,11 @@ export const cannabisContent = {
 export const aboutContent = {
   title: "Dra. Ingrid Azevedo",
   paragraphs: [
-    "Antes de prescrever cannabis para bruxismo, eu fui dentista por anos.",
-    "Vi muito paciente entregar a boca para resolver um problema que não era da boca. Placa, botox, ajuste oclusal, ortodontia, restauração — tudo executado com técnica, e a dor continuava. Quando comecei a estudar cannabis medicinal e o sistema endocanabinoide, entendi: bruxismo é uma disfunção autonômica e dopaminérgica que se manifesta na mandíbula. E pode ser modulada.",
-    "Hoje sou o que poucos profissionais conseguem ser ao mesmo tempo: dentista que enxerga a boca, e prescritora canábica que entende o sistema nervoso. É essa dupla leitura que entrega resultado em casos que pararam de responder ao tratamento convencional.",
+    "Antes de ser prescritora, fui paciente.",
+    "Passei por estresse pós-traumático que me deixou ansiosa, deprimida e travada. A cannabis medicinal me devolveu o volante da minha própria vida. Só depois disso abri a porta para os meus pacientes — porque eu sei, de dentro, o que significa ter a dose certa. E o que significa não ter.",
+    "Como dentista, enxergo o que outros prescritores não enxergam: bruxismo é uma disfunção dopaminérgica que aparece na boca. Fobia de cadeira é uma resposta do sistema nervoso que pode ser modulada. Pós-cirúrgico odontológico tem protocolo canábico com base científica. Visitei fazendas de cultivo para saber exatamente o que prescrevo — da semente ao frasco.",
   ],
-  credentials:
-    "Cirurgiã-Dentista · CRO PB 11599 · Prescritora Canábica habilitada pela ANVISA",
+  credentials: "Cirurgiã-Dentista · CRO PB 11599 · Prescritora Canábica habilitada pela ANVISA",
   badges: ["CRO PB 11599", "Prescritora ANVISA"],
 };
 
