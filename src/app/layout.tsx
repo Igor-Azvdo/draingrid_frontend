@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Urbanist, DM_Sans } from "next/font/google";
-import { faqContent } from "@/data/landing-content";
 import "./globals.css";
 
 const urbanist = Urbanist({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800"], variable: "--font-urbanist" });
@@ -151,19 +150,6 @@ const websiteJsonLd = {
   publisher: { "@id": `${SITE_URL}/#physician` },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqContent.items.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -185,10 +171,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className="text-text antialiased">{children}</body>

@@ -10,7 +10,6 @@ import { HowItWorks } from "@/components/landing/bruxismo/HowItWorks";
 import { Conditions } from "@/components/landing/bruxismo/Conditions";
 import { Testimonials } from "@/components/landing/bruxismo/Testimonials";
 import { FAQ } from "@/components/landing/bruxismo/FAQ";
-import { Plans } from "@/components/landing/bruxismo/Plans";
 import { FinalCTA } from "@/components/landing/bruxismo/FinalCTA";
 import { Footer } from "@/components/landing/bruxismo/Footer";
 import { FloatingWhatsApp } from "@/components/landing/bruxismo/FloatingWhatsApp";
@@ -30,7 +29,6 @@ export default function BruxismoLanding() {
         <Conditions />
         <Testimonials />
         <FAQ />
-        <Plans />
         <FinalCTA />
       </main>
       <Footer />
