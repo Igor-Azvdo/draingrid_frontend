@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { siteConfig } from "@/data/site-config";
 import { LinkCard } from "@/components/LinkCard";
+import { BookingWidget } from "@/components/BookingWidget";
 
 export default function Link2() {
   return (
@@ -44,6 +45,14 @@ export default function Link2() {
                 <LinkCard link={link} />
               </div>
             ))}
+          </div>
+
+          {/* Booking widget */}
+          <div className="w-full animate-fade-up" style={{ animationDelay: `${(siteConfig.links.length + 1) * 120}ms` }}>
+            <p className="text-center text-sm font-semibold text-text/40 uppercase tracking-widest mb-4">
+              Agendar consulta
+            </p>
+            <BookingWidget />
           </div>
 
           {/* Footer */}

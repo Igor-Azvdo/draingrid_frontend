@@ -9,7 +9,7 @@ const SITE_URL = "https://dentistacanabica.com.br";
 const SITE_NAME = "Dra. Ingrid Azevedo — Dentista Canábica";
 const TITLE = "Dentista Canábica | Cannabis Medicinal Online · Dra. Ingrid Azevedo";
 const DESCRIPTION =
-  "Dra. Ingrid Azevedo — dentista e prescritora canábica habilitada pela ANVISA. Cannabis medicinal online, com prescrição legal e protocolo individualizado para dor crônica, insônia, ansiedade, bruxismo, fibromialgia, TEA e mais. Atendimento por teleconsulta em todo o Brasil.";
+  "Dra. Ingrid Azevedo — dentista e prescritora canábica. Cannabis medicinal online, com prescrição legal e protocolo individualizado para dor crônica, insônia, ansiedade, bruxismo, fibromialgia, TEA e mais. Atendimento por teleconsulta em todo o Brasil.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "cannabis medicinal",
     "cannabis medicinal online",
     "prescritora canábica",
-    "prescritor cannabis ANVISA",
+    "prescritor cannabis medicinal",
     "receita de cannabis",
     "Dra Ingrid Azevedo",
     "dor crônica",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Dra. Ingrid Azevedo — Dentista e prescritora canábica habilitada pela ANVISA",
+        alt: "Dra. Ingrid Azevedo — Dentista e prescritora canábica",
       },
     ],
   },
@@ -103,7 +103,7 @@ const physicianJsonLd = {
   name: "Dra. Ingrid Azevedo",
   alternateName: "Dentista Canábica",
   description:
-    "Cirurgiã-dentista e prescritora de cannabis medicinal habilitada pela ANVISA. Atendimento online para todo o Brasil.",
+    "Cirurgiã-dentista e prescritora de cannabis medicinal. Atendimento online para todo o Brasil.",
   url: SITE_URL,
   image: `${SITE_URL}/dra-ingrid.jpg`,
   medicalSpecialty: ["Dentistry", "PainMedicine", "Psychiatric"],
@@ -128,7 +128,7 @@ const physicianJsonLd = {
     {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Prescritora Canábica habilitada pela ANVISA",
+      name: "Prescritora Canábica",
     },
   ],
   contactPoint: {

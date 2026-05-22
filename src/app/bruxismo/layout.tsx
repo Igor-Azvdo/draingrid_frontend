@@ -6,7 +6,7 @@ const URL = `${SITE_URL}/bruxismo`;
 
 const TITLE = "Tratamento de Bruxismo com Cannabis Medicinal | Dra. Ingrid Azevedo";
 const DESCRIPTION =
-  "Bruxismo severo, mandíbula travada e disfunção de ATM tratados com cannabis medicinal. Protocolo individualizado por dentista e prescritora canábica habilitada pela ANVISA. Atendimento online em todo o Brasil.";
+  "Bruxismo severo, mandíbula travada e disfunção de ATM tratados com cannabis medicinal. Protocolo individualizado por dentista e prescritora canábica. Atendimento online em todo o Brasil.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     "botox masseter alternativa",
     "Dra Ingrid Azevedo",
     "dentista canábica",
-    "prescritor cannabis ANVISA",
+    "prescritor cannabis medicinal",
     "CBD para bruxismo",
   ],
 };
@@ -94,7 +94,7 @@ const serviceJsonLd = {
   "@id": `${URL}/#therapy`,
   name: "Tratamento de bruxismo com cannabis medicinal",
   description:
-    "Protocolo médico individualizado de cannabis medicinal para bruxismo noturno, diurno e refratário, conduzido por dentista e prescritora canábica habilitada pela ANVISA.",
+    "Protocolo médico individualizado de cannabis medicinal para bruxismo noturno, diurno e refratário, conduzido por dentista e prescritora canábica.",
   url: URL,
   provider: { "@id": `${SITE_URL}/#physician` },
   areaServed: { "@type": "Country", name: "Brasil" },

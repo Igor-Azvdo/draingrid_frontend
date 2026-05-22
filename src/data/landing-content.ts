@@ -5,7 +5,7 @@ export const heroContent = {
   description:
     "Sou a Dra. Ingrid Azevedo, dentista e prescritora canábica. A boca foi o que me ensinou: bruxismo, dor na mandíbula, fobia de cadeira — esses não são problemas de dente. São mensagens do sistema nervoso. E o sistema nervoso, a cannabis medicinal sabe tratar.",
   cta: "Agendar minha consulta",
-  badges: ["Atendimento online", "Todo o Brasil", "Prescrição legal ANVISA"],
+  badges: ["Atendimento online", "Todo o Brasil", "Prescrição legal"],
 };
 
 export const painPoints = {
@@ -48,8 +48,8 @@ export const aboutContent = {
     "Passei por estresse pós-traumático que me deixou ansiosa, deprimida e travada. A cannabis medicinal me devolveu o volante da minha própria vida. Só depois disso abri a porta para os meus pacientes — porque eu sei, de dentro, o que significa ter a dose certa. E o que significa não ter.",
     "Como dentista, enxergo o que outros prescritores não enxergam: bruxismo é uma disfunção dopaminérgica que aparece na boca. Fobia de cadeira é uma resposta do sistema nervoso que pode ser modulada. Pós-cirúrgico odontológico tem protocolo canábico com base científica. Visitei fazendas de cultivo para saber exatamente o que prescrevo — da semente ao frasco.",
   ],
-  credentials: "Cirurgiã-Dentista · CRO PB 11599 · Prescritora Canábica habilitada pela ANVISA",
-  badges: ["CRO PB 11599", "Prescritora ANVISA"],
+  credentials: "Cirurgiã-Dentista · CRO PB 11599 · Prescritora Canábica",
+  badges: ["CRO PB 11599", "Prescritora Canábica"],
 };
 
 export const stepsContent = {
@@ -150,7 +150,7 @@ export const faqContent = {
     {
       question: "É legal?",
       answer:
-        "Sim. Sou prescritora habilitada pela ANVISA. Você recebe receita médica e acessa o produto em distribuidoras e farmácias autorizadas.",
+        "Sim. Sou prescritora canábica. Você recebe receita médica e acessa o produto em distribuidoras e farmácias autorizadas.",
     },
     {
       question: "É caro?",

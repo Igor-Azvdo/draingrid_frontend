@@ -29,7 +29,7 @@ export function Footer() {
               unoptimized
             />
             <p className="text-white/70 text-sm leading-relaxed mb-6">
-              Dentista e prescritora canábica habilitada pela ANVISA. Tratamento
+              Dentista e prescritora canábica. Tratamento
               individualizado com cannabis medicinal.
             </p>
             <div className="flex gap-3">
@@ -141,7 +141,7 @@ export function Footer() {
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                Prescritora habilitada ANVISA
+                Prescritora Canábica
               </li>
               <li className="flex items-start gap-3">
                 <svg

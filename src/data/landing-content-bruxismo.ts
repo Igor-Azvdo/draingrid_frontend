@@ -4,10 +4,10 @@ export const heroContent = {
   title:
     "Bruxismo não é problema de dente. É um pedido de socorro do sistema nervoso.",
   description:
-    "Sou a Dra. Ingrid Azevedo — dentista e prescritora canábica habilitada pela ANVISA. Trato o que faz a sua mandíbula travar à noite: o sistema nervoso autônomo, não o esmalte do dente. Cannabis medicinal, dose ajustada gota por gota, acompanhamento semanal.",
+    "Sou a Dra. Ingrid Azevedo — dentista e prescritora canábica. Trato o que faz a sua mandíbula travar à noite: o sistema nervoso autônomo, não o esmalte do dente. Cannabis medicinal, dose ajustada gota por gota, acompanhamento semanal.",
   cta: "Agendar consulta sobre bruxismo",
   badges: [
-    "Dentista + Prescritora ANVISA",
+    "Dentista · Prescritora Canábica",
     "Atendimento online",
     "Todo o Brasil",
   ],
@@ -16,42 +16,13 @@ export const heroContent = {
 export const painPoints = {
   title: "Você se reconhece aqui?",
   items: [
-    {
-      icon: "jaw",
-      text: "Acorda com a mandíbula travada e dor que desce pela cervical",
-      image:
-        "https://images.unsplash.com/photo-1616091216791-a5360b5fc78a?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      icon: "stack",
-      text: "Já quebrou dente, lascou ou tem desgaste visível no esmalte",
-      image:
-        "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      icon: "moon",
-      text: "Dor de cabeça que começa antes do meio-dia e não passa",
-      image:
-        "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      icon: "repeat",
-      text: "Usa placa de bruxismo há anos — protege o dente, mas o ranger continua",
-      image:
-        "https://images.unsplash.com/photo-1579165466949-3180a3d056d5?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      icon: "repeat",
-      text: "Fez botox no masseter, aliviou três meses, agora voltou pior",
-      image:
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      icon: "pill",
-      text: "Toma relaxante muscular, ansiolítico, faz fisioterapia — e a mandíbula não solta",
-      image:
-        "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=600&q=80",
-    },
+    "Mandíbula travada e dolorida quase todo dia",
+    "Dentes rachados e quebrados",
+    "Já fez placa de bruxismo, toma remédios, e ainda sente dores na mandíbula",
+    "Acorda às 3h e não dorme mais",
+    "Toma remédio para dormir e ainda acorda cansado",
+    "Tem dores que os exames não encontram",
+    "Tomando várias medicações e se sentindo cada vez pior",
   ],
   closing:
     "Se você se reconheceu: o problema nunca foi a sua mordida. É um sinal de que o seu sistema nervoso autônomo está em alerta — e o corpo descarrega isso na sua boca.",
@@ -59,15 +30,15 @@ export const painPoints = {
 
 export const problemContent = {
   title: "A odontologia trata o dente. Mas o ranger vem do cérebro.",
-  highlight: "Por isso a placa não cura. Ela protege.",
-  body: "Bruxismo noturno é um evento do sono — uma descarga do sistema nervoso simpático que faz os masseteres apertarem com 250 a 800 newtons de força. Nenhum dispositivo intraoral acessa essa origem. Ele só ameniza o estrago.\n\nO que muda o quadro é modular o que dispara o ranger: a profundidade do sono, o tônus muscular noturno, a ansiedade subclínica, a descarga dopaminérgica. É exatamente nesses sistemas que a cannabis medicinal age.",
+  highlight: "E existe um tratamento que vai até lá.",
+  body: "Bruxismo noturno é um evento do sono — uma descarga do sistema nervoso simpático que força seus dentes com intensidade absurda. Nenhum dispositivo intraoral chega nessa origem. Ele só reduz o estrago.\n\nA cannabis medicinal age diretamente no sistema nervoso central: reduz o estado de hipervigilância, aprofunda o sono e elimina o gatilho. Você acorda sem dor na mandíbula, sem cansaço — e, muitas vezes, sem precisar da placa.",
 };
 
 export const cannabisContent = {
   title: "Cannabis medicinal e bruxismo: o que a ciência mostra",
   intro:
-    "Não é uso recreativo. Não causa efeito psicoativo quando bem prescrita. Regulamentada pela ANVISA desde 2019, ela atua diretamente no Sistema Endocanabinoide — o sistema do seu corpo que regula sono, dor, tônus muscular e resposta ao estresse. Exatamente os quatro eixos envolvidos no bruxismo.",
-  body: "Estudos mostram que o canabidiol (CBD), em doses individualizadas, aprofunda o estágio N3 do sono (a fase em que o bruxismo ocorre menos), reduz a hiperatividade dos masseteres durante a noite e diminui a ativação simpática noturna. Em muitos pacientes, o ranger reduz em semanas. Em outros, em meses. Em todos, o protocolo é desenhado para o organismo da pessoa — não para a média.",
+    "Não é uso recreativo. Não causa efeito psicoativo quando bem prescrita. **Regulamentada pela ANVISA desde 2019**, ela atua diretamente no Sistema Endocanabinoide — o sistema do seu corpo que regula **sono, dor, tônus muscular e resposta ao estresse**. Exatamente os quatro eixos envolvidos no bruxismo.",
+  body: "Estudos mostram que o **canabidiol (CBD)**, em doses individualizadas, **aprofunda o estágio N3 do sono** (a fase em que o bruxismo ocorre menos), **reduz a hiperatividade dos músculos faciais durante a noite** e **diminui a ativação simpática noturna**. Em muitos pacientes, o ranger reduz em semanas. Em outros, em meses. Em todos, **o protocolo é desenhado para o organismo da pessoa** — não para a média.",
   cards: [
     {
       title: "Atua no sono profundo",
@@ -99,8 +70,8 @@ export const aboutContent = {
     "Passei por estresse pós-traumático que me deixou ansiosa, deprimida e travada. A cannabis medicinal me devolveu o volante da minha própria vida. Só depois disso abri a porta para os meus pacientes — porque eu sei, de dentro, o que significa ter a dose certa. E o que significa não ter.",
     "Como dentista, enxergo o que outros prescritores não enxergam: bruxismo é uma disfunção dopaminérgica que aparece na boca. Fobia de cadeira é uma resposta do sistema nervoso que pode ser modulada. Pós-cirúrgico odontológico tem protocolo canábico com base científica. Visitei fazendas de cultivo para saber exatamente o que prescrevo — da semente ao frasco.",
   ],
-  credentials: "Cirurgiã-Dentista · CRO PB 11599 · Prescritora Canábica habilitada pela ANVISA",
-  badges: ["CRO PB 11599", "Prescritora ANVISA"],
+  credentials: "Cirurgiã-Dentista · CRO PB 11599 · Prescritora Canábica",
+  badges: ["CRO PB 11599", "Prescritora Canábica"],
 };
 
 export const stepsContent = {
@@ -109,26 +80,22 @@ export const stepsContent = {
     {
       number: 1,
       title: "Consulta inicial",
-      description:
-        "Avalio sua história odontológica (placa, botox, restaurações, ortodontia), seu sono, sua ansiedade e suas medicações. Identifico o tipo do seu bruxismo — noturno, diurno ou misto — e o gatilho dominante. Você sai da consulta com um protocolo escrito.",
+      description: "Mapeio seu bruxismo — tipo, gatilho, histórico. Você sai com um protocolo escrito no mesmo dia.",
     },
     {
       number: 2,
-      title: "Ajuste semanal de dose",
-      description:
-        "Começamos com a dose mínima de CBD ao deitar. Aumentamos gotinha por gotinha, semana a semana, até a mandíbula soltar de noite. Cada sistema nervoso tem um ritmo. O seu, eu respeito.",
+      title: "Dose sob medida",
+      description: "Início com CBD mínimo ao deitar. Ajuste semana a semana até a mandíbula soltar — no seu ritmo.",
     },
     {
       number: 3,
-      title: "Estabilização",
-      description:
-        "Quando o ranger reduz, o sono se aprofunda e a dor da manhã some, chegamos na sua dose terapêutica. É aqui que a placa deixa de ser muleta — e vira só uma proteção mecânica residual, se ainda for necessária.",
+      title: "Resultado real",
+      description: "Sono profundo, sem dor de manhã. Sua dose terapêutica encontrada. A placa vira opcional.",
     },
     {
       number: 4,
-      title: "Plano de continuidade",
-      description:
-        "Bruxismo é crônico. Mas a manutenção é leve: doses menores, revisões trimestrais, ajustes em fases de estresse, luto ou mudança de vida. Eu não desapareço depois que a dor passa.",
+      title: "Continuidade leve",
+      description: "Revisões trimestrais, doses menores, suporte nos momentos de estresse. Eu não sumo depois do resultado.",
     },
   ],
 };
@@ -251,7 +218,7 @@ export const faqContent = {
     {
       question: "É legal? Você atende a minha cidade?",
       answer:
-        "Sim — sou prescritora habilitada pela ANVISA. A receita é digital e o atendimento é por teleconsulta, para todo o Brasil. O produto chega em casa via distribuidora autorizada.",
+        "Sim — sou prescritora canábica. A receita é digital e o atendimento é por teleconsulta, para todo o Brasil. O produto chega em casa via distribuidora autorizada.",
     },
   ],
 };

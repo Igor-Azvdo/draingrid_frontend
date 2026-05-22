@@ -7,7 +7,6 @@ import { Problem } from "@/components/landing/bruxismo/Problem";
 import { WhatIsCannabis } from "@/components/landing/bruxismo/WhatIsCannabis";
 import { About } from "@/components/landing/bruxismo/About";
 import { HowItWorks } from "@/components/landing/bruxismo/HowItWorks";
-import { Conditions } from "@/components/landing/bruxismo/Conditions";
 import { Testimonials } from "@/components/landing/bruxismo/Testimonials";
 import { FAQ } from "@/components/landing/bruxismo/FAQ";
 import { FinalCTA } from "@/components/landing/bruxismo/FinalCTA";
@@ -26,10 +25,9 @@ export default function BruxismoLanding() {
         <WhatIsCannabis />
         <HowItWorks />
         <About />
-        <Conditions />
         <Testimonials />
-        <FAQ />
         <FinalCTA />
+        <FAQ />
       </main>
       <Footer />
     </>

@@ -1,32 +1,65 @@
+import Image from "next/image";
 import { Container } from "../Container";
-import { problemContent } from "@/data/landing-content-bruxismo";
+import { WhatsAppButton } from "./WhatsAppButton";
+
+const cardContent = (
+  <>
+    <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary-dark text-[10px] font-bold tracking-widest uppercase mb-5">
+      ainda há esperança
+    </div>
+    <h2 className="text-3xl md:text-4xl font-extrabold text-text leading-tight mb-4">
+      Vamos tratar a origem,{" "}
+      <span className="text-primary-dark">não o sintoma.</span>
+    </h2>
+    <p className="text-text/55 text-base leading-relaxed mb-7">
+      A placa protege o esmalte. Mas o bruxismo vem do sistema nervoso — e a cannabis medicinal é o tratamento que chega lá. Regulamentada pela ANVISA. Prescrita por dentista. Entregue em casa.
+    </p>
+    <WhatsAppButton variant="green">
+      Quero entender meu tratamento
+    </WhatsAppButton>
+  </>
+);
 
 export function Problem() {
   return (
-    <section className="py-24 bg-section-green-soft md:rounded-[4rem] mx-0 md:mx-6 mb-6 scroll-mt-24">
+    <section className="py-16 scroll-mt-24">
       <Container>
-        <div className="max-w-[720px] mx-auto text-center">
-          <div className="inline-block px-5 py-2 rounded-full border border-card-border bg-white text-xs font-bold tracking-widest uppercase text-primary-dark mb-6">
-            Tratamento Individualizado
+
+        {/* Mobile: image on top, card below */}
+        <div className="md:hidden rounded-[2.5rem] overflow-hidden">
+          <div className="relative h-[280px] w-full">
+            <Image
+              src="/problem-hero.jpg"
+              alt="Tratamento para bruxismo com cannabis medicinal"
+              fill
+              className="object-cover object-top"
+            />
           </div>
-          <h2 className="text-xl md:text-2xl font-semibold text-text/70 leading-snug mb-4">
-            {problemContent.title}{" "}
-            <span className="hidden md:inline text-4xl md:text-6xl font-extrabold text-text">
-              Mas você <span className="text-highlight">não é uma bula.</span>
-            </span>
-          </h2>
-          <p className="text-4xl font-extrabold text-text mb-10 md:hidden">
-            Mas você <span className="text-highlight">não é uma bula.</span>
-          </p>
-          {problemContent.body.split("\n\n").map((paragraph, i) => (
-            <p
-              key={i}
-              className="text-text/60 text-lg leading-[1.8] mb-4 last:mb-0 font-light"
-            >
-              {paragraph}
-            </p>
-          ))}
+          <div className="bg-white p-8">
+            {cardContent}
+          </div>
         </div>
+
+        {/* Desktop: side-by-side with overlapping card */}
+        <div className="hidden md:block relative rounded-[3rem] overflow-hidden min-h-[540px]">
+          <div className="absolute inset-0 flex">
+            <div className="w-[52%] relative">
+              <Image
+                src="/problem-hero.jpg"
+                alt="Tratamento para bruxismo com cannabis medicinal"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="flex-1 bg-primary-dark" />
+          </div>
+          <div className="relative z-10 flex items-center min-h-[540px] justify-end pr-8 md:pr-12">
+            <div className="bg-white rounded-[2rem] p-8 md:p-10 w-[52%]">
+              {cardContent}
+            </div>
+          </div>
+        </div>
+
       </Container>
     </section>
   );

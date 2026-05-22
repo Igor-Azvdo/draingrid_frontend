@@ -1,76 +1,103 @@
+"use client";
+
+import { useEffect } from "react";
+import Image from "next/image";
 import { Container } from "../Container";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { heroContent } from "@/data/landing-content-bruxismo";
 
 export function Hero() {
+  useEffect(() => {
+    const logoEl = document.getElementById("hero-logo-wrap");
+    if (!logoEl) return;
+
+    const update = () => {
+      const p = Math.min(window.scrollY / 350, 1);
+      const opacity = Math.max(0, 1 - p * 2.2);
+      const scale = 1 - p * 0.18;
+      const ty = -p * 28;
+      logoEl.style.opacity = String(opacity);
+      logoEl.style.transform = `translateY(${ty}px) scale(${scale})`;
+    };
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background images — mobile vs desktop (LCP-optimized) */}
-      <picture className="absolute inset-0 block">
-        <source media="(min-width: 768px)" srcSet="/herobglp.jpg" />
-        <img
-          src="/herobglpmobile.jpg"
-          alt="Dra. Ingrid Azevedo, dentista e prescritora canábica habilitada pela ANVISA"
-          className="absolute inset-0 w-full h-full object-cover object-[center_top] md:object-center"
-          loading="eager"
-          decoding="async"
-          // @ts-expect-error fetchpriority is valid HTML
-          fetchpriority="high"
-        />
-      </picture>
+    <section className="bg-white overflow-hidden min-h-screen flex flex-col">
+      <div className="flex-1 flex flex-col md:flex-row">
 
-      {/* Content */}
-      <Container className="relative z-10 pt-64 pb-16 md:pt-60 md:pb-24">
-        <div className="md:w-1/2">
-          <div className="text-center md:text-left space-y-6">
-            <div className="inline-flex items-center px-4 py-2 rounded-full border border-text/15 bg-white/60 backdrop-blur-sm text-[10px] font-bold tracking-[0.2em] uppercase text-text">
-              Cannabis Medicinal Online · Prescrição ANVISA
-            </div>
+        {/* Left column */}
+        <div className="flex-[45] flex flex-col px-6 sm:px-10 lg:px-16 xl:px-20 pb-10 md:pb-0">
 
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-[1.08] tracking-tight text-text drop-shadow-[0_8px_60px_rgba(255,255,255,1)]">
-              {heroContent.title}
-            </h1>
+          {/* Hero text content */}
+          <div className="flex-1 flex items-center pt-8 md:pt-10 pb-10 md:pb-16">
+            <div className="space-y-7 max-w-xl w-full">
 
-            <p className="text-lg text-text/60 font-light leading-relaxed max-w-xl">
-              {heroContent.description}
-            </p>
+              {/* Large hero logo — fades out as header logo appears (desktop only) */}
+              <div
+                id="hero-logo-wrap"
+                className="hidden md:block will-change-transform"
+                style={{ transformOrigin: "left center" }}
+              >
+                <Image
+                  src="/logo.svg"
+                  alt="Dra. Ingrid Azevedo"
+                  width={220}
+                  height={130}
+                  className="h-16 md:h-24 w-auto"
+                  unoptimized
+                  priority
+                />
+              </div>
 
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
-              <WhatsAppButton variant="green">
-                {heroContent.cta}
-              </WhatsAppButton>
-            </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold leading-[1.1] tracking-tight">
+                <span className="text-primary">Bruxismo não é problema de dente.</span>{" "}
+                <span className="text-text">É um pedido de socorro do sistema nervoso.</span>
+              </h1>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 pt-2">
-              {heroContent.badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="flex items-center gap-2 text-sm text-text/60"
+              <p className="text-sm text-text/55 leading-relaxed max-w-md">
+                {heroContent.description}
+              </p>
+
+              <div className="flex flex-row flex-wrap items-center gap-3">
+                <WhatsAppButton variant="green">
+                  Agendar Consulta
+                </WhatsAppButton>
+
+                <a
+                  href="#como-funciona"
+                  className="inline-flex items-center gap-2 px-6 py-[13px] rounded-xl border border-text/20 text-[12px] font-bold tracking-[0.1em] uppercase text-text/65 hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
                 >
-                  <svg
-                    className="w-4 h-4 text-primary-dark shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
+                  Como funciona
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
-                  {badge}
-                </span>
-              ))}
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </Container>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
-        <div className="w-[1px] h-8 bg-text/20" />
+        {/* Right column — image */}
+        <div className="flex-[55] flex flex-col px-4 sm:px-6 lg:px-8 pb-6 pt-6 md:pt-0 md:pb-0">
+          <div className="relative flex-1 rounded-[2rem] md:rounded-none md:rounded-tl-[3rem] md:rounded-bl-[3rem] overflow-hidden min-h-[320px]">
+            <picture>
+              <source media="(min-width: 768px)" srcSet="/herobglp.jpg" />
+              <img
+                src="/herobglpmobile.jpg"
+                alt="Dra. Ingrid Azevedo, dentista e prescritora canábica"
+                className="absolute inset-0 w-full h-full object-cover object-[center_top]"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
+            </picture>
+          </div>
+        </div>
+
       </div>
     </section>
   );
