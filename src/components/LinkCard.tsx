@@ -4,8 +4,8 @@ const icons: Record<LinkItem["icon"], React.ReactNode> = {
   whatsapp: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="currentColor"
     >
@@ -15,8 +15,8 @@ const icons: Record<LinkItem["icon"], React.ReactNode> = {
   instagram: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="currentColor"
     >
@@ -26,8 +26,8 @@ const icons: Record<LinkItem["icon"], React.ReactNode> = {
   website: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -48,18 +48,17 @@ export function LinkCard({ link }: { link: LinkItem }) {
   if (link.disabled) {
     return (
       <div
-        className={`group relative flex items-center gap-5 w-full px-7 py-5 ${squircle} cursor-not-allowed
-          bg-white/40 border border-card-border backdrop-blur-sm
-          shadow-[0_2px_16px_var(--color-card-shadow)]`}
+        className={`group relative flex items-center gap-4 w-full px-5 py-3.5 ${squircle} cursor-not-allowed
+          bg-white/5 border border-white/10 backdrop-blur-sm`}
       >
         <span
-          className={`flex items-center justify-center w-12 h-12 ${squircle} bg-primary/10 text-primary-dark/50 shrink-0`}
+          className={`flex items-center justify-center w-9 h-9 ${squircle} bg-white/10 text-white/30 shrink-0`}
         >
           {icons[link.icon]}
         </span>
-        <span className="text-text/50 font-semibold text-lg">{link.label}</span>
+        <span className="text-white/30 font-semibold text-base">{link.label}</span>
         {link.disclaimer && (
-          <span className="ml-auto text-sm text-primary-dark font-bold tracking-wide uppercase">
+          <span className="ml-auto text-sm text-primary-light font-bold tracking-wide uppercase">
             {link.disclaimer}
           </span>
         )}
@@ -72,24 +71,23 @@ export function LinkCard({ link }: { link: LinkItem }) {
       href={link.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group relative flex items-center gap-5 w-full px-7 py-5 ${squircle}
-        bg-card-bg border border-card-border backdrop-blur-sm
-        shadow-[0_2px_16px_var(--color-card-shadow)]
-        hover:shadow-[0_8px_32px_var(--color-card-shadow)] hover:border-primary-light
+      className={`group relative flex items-center gap-4 w-full px-5 py-3.5 ${squircle}
+        bg-white/5 border-2 border-primary backdrop-blur-sm
+        hover:bg-primary/20 hover:border-primary-light hover:shadow-[0_0_20px_rgba(107,158,116,0.4)]
         hover:scale-[1.03] active:scale-[0.98]
         transition-all duration-300 ease-out`}
     >
       <span
-        className={`flex items-center justify-center w-12 h-12 ${squircle} text-primary-dark shrink-0 transition-colors duration-300`}
+        className={`flex items-center justify-center w-9 h-9 ${squircle} text-primary-light shrink-0 transition-colors duration-300`}
       >
         {icons[link.icon]}
       </span>
       <div className="flex flex-col">
-        <span className="text-text font-semibold text-lg group-hover:text-primary-dark transition-colors duration-300">
+        <span className="text-white font-semibold text-base transition-colors duration-300">
           {link.label}
         </span>
         {link.subtitle && (
-          <span className="text-text/50 text-sm font-medium">{link.subtitle}</span>
+          <span className="text-white/50 text-sm font-medium">{link.subtitle}</span>
         )}
       </div>
       <svg
@@ -102,7 +100,7 @@ export function LinkCard({ link }: { link: LinkItem }) {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="ml-auto text-primary/40 group-hover:text-primary-dark group-hover:translate-x-1 transition-all duration-300"
+        className="ml-auto text-white/30 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"
       >
         <path d="M5 12h14" />
         <path d="m12 5 7 7-7 7" />

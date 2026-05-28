@@ -29,7 +29,8 @@ export const painPoints = {
 };
 
 export const problemContent = {
-  title: "A odontologia trata o dente. Mas o ranger vem do cérebro.",
+  // title: "A odontologia trata o dente. Mas o ranger vem do cérebro.",
+  title: "O bruxismo não é um problema dentário. O ranger vem do cérebro.",
   highlight: "E existe um tratamento que vai até lá.",
   body: "Bruxismo noturno é um evento do sono — uma descarga do sistema nervoso simpático que força seus dentes com intensidade absurda. Nenhum dispositivo intraoral chega nessa origem. Ele só reduz o estrago.\n\nA cannabis medicinal age diretamente no sistema nervoso central: reduz o estado de hipervigilância, aprofunda o sono e elimina o gatilho. Você acorda sem dor na mandíbula, sem cansaço — e, muitas vezes, sem precisar da placa.",
 };

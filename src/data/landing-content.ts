@@ -101,10 +101,10 @@ export const conditionsContent = {
       name: "Neurodesenvolvimento",
       items: ["Autismo (TEA)", "TDAH", "Seletividade alimentar em crianças"],
     },
-    {
-      name: "Odontologia específica",
-      items: ["Fobia de dentista", "Síndrome da ardência bucal", "Bruxismo sem resposta a tratamentos convencionais"],
-    },
+    // {
+    //   name: "Odontologia específica",
+    //   items: ["Fobia de dentista", "Síndrome da ardência bucal", "Bruxismo sem resposta a tratamentos convencionais"],
+    // },
     {
       name: "Outros",
       items: ["Dependência de tabaco", "Desmame assistido de medicação convencional"],

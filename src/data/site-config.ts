@@ -16,12 +16,12 @@ export const siteConfig = {
       url: "https://wa.me/5511985827582",
       icon: "whatsapp" as const,
     },
-    {
-      label: "Odontologia",
-      subtitle: "João Pessoa",
-      url: "https://wa.me/5583987819876",
-      icon: "whatsapp" as const,
-    },
+    // {
+    //   label: "Odontologia",
+    //   subtitle: "João Pessoa",
+    //   url: "https://wa.me/5583987819876",
+    //   icon: "whatsapp" as const,
+    // },
     {
       label: "Website",
       url: "/",

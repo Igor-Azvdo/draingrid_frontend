@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Urbanist, DM_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const urbanist = Urbanist({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800"], variable: "--font-urbanist" });
@@ -161,10 +162,6 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/herobglp.jpg" media="(min-width: 768px)" fetchPriority="high" />
         <link rel="preload" as="image" href="/herobglpmobile.jpg" media="(max-width: 767px)" fetchPriority="high" />
         <script
-          async
-          src="https://api.clinicweed.proximosite.com.br/api/tracking/script/clw_8fc17d6d58311b45e5813d531bc2fb5f.js"
-        />
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
         />
@@ -173,7 +170,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
-      <body className="text-text antialiased">{children}</body>
+      <body className="text-text antialiased">
+        {children}
+        {/* ClinicWeed tracking — consent DEVE vir antes do tracker */}
+        <Script src="https://api.clinicweed.com.br/api/tracking/consent/clw_8fc17d6d58311b45e5813d531bc2fb5f" strategy="afterInteractive" />
+        <Script src="https://api.clinicweed.com.br/api/tracking/script-v2/clw_8fc17d6d58311b45e5813d531bc2fb5f" strategy="afterInteractive" />
+      </body>
     </html>
   );
 }

@@ -5,37 +5,28 @@ import { BookingWidget } from "@/components/BookingWidget";
 
 export default function Link2() {
   return (
-    <main className="min-h-screen flex flex-col">
-      {/* Hero image with fade - mobile only */}
-      <div className="relative w-full h-[35vh] sm:h-[50vh] shrink-0 md:hidden">
-        <Image
-          src="/hero.jpg"
-          alt="Dra Ingrid Azevedo"
-          fill
-          priority
-          className="object-cover object-top"
-        />
-        <div className="absolute inset-x-0 -bottom-[2px] top-0 bg-gradient-to-t from-bg via-transparent to-transparent" />
-      </div>
-
+    <main className="min-h-screen flex flex-col bg-[#0D1F17]">
       {/* Content */}
-      <div className="flex flex-col items-center flex-1 px-5 -mt-10 sm:-mt-20 md:mt-16 relative z-10">
-        <div className="w-full max-w-lg flex flex-col items-center gap-6">
-          {/* Name + Description */}
+      <div className="flex flex-col items-center flex-1 px-5 pt-14 relative z-10">
+        <div className="w-full max-w-lg flex flex-col items-center gap-5">
+          {/* Profile photo + Description */}
           <div className="flex flex-col items-center text-center animate-fade-up">
-            <Image
-              src="/logo.svg"
-              alt={siteConfig.name}
-              width={220}
-              height={128}
-            />
-            <p className="mt-2 text-base sm:text-lg text-text/60 font-medium leading-relaxed max-w-sm mx-auto">
+            <div className="relative w-28 h-28 rounded-full overflow-hidden ring-4 ring-white/20 shadow-lg">
+              <Image
+                src="/hero.jpg"
+                alt="Dra Ingrid Azevedo"
+                fill
+                priority
+                className="object-cover object-top"
+              />
+            </div>
+            <p className="mt-4 text-sm sm:text-base text-white/60 font-medium leading-relaxed max-w-sm mx-auto">
               {siteConfig.description}
             </p>
           </div>
 
           {/* Links */}
-          <div className="w-full flex flex-col gap-5">
+          <div className="w-full flex flex-col gap-3">
             {siteConfig.links.map((link, index) => (
               <div
                 key={index}
@@ -49,14 +40,14 @@ export default function Link2() {
 
           {/* Booking widget */}
           <div className="w-full animate-fade-up" style={{ animationDelay: `${(siteConfig.links.length + 1) * 120}ms` }}>
-            <p className="text-center text-sm font-semibold text-text/40 uppercase tracking-widest mb-4">
+            <p className="text-center text-xs font-semibold text-white/30 uppercase tracking-widest mb-3">
               Agendar consulta
             </p>
             <BookingWidget />
           </div>
 
           {/* Footer */}
-          <footer className="mt-6 mb-10 text-center text-sm text-text/30">
+          <footer className="mt-6 mb-10 text-center text-sm text-white/20">
             Desenvolvido por Igor Azevedo
           </footer>
         </div>
