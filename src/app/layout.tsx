@@ -172,9 +172,8 @@ export default function RootLayout({
       </head>
       <body className="text-text antialiased">
         {children}
-        {/* ClinicWeed tracking — consent DEVE vir antes do tracker */}
-        <Script src="https://api.clinicweed.com.br/api/tracking/consent/clw_8fc17d6d58311b45e5813d531bc2fb5f" strategy="afterInteractive" />
-        <Script src="https://api.clinicweed.com.br/api/tracking/script-v2/clw_8fc17d6d58311b45e5813d531bc2fb5f" strategy="afterInteractive" />
+        {/* ClinicWeed tracking */}
+        <Script src="https://api.clinicweed.com.br/api/t/clw_8fc17d6d58311b45e5813d531bc2fb5f" strategy="afterInteractive" />
       </body>
     </html>
   );
