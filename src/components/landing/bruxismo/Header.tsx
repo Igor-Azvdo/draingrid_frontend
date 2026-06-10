@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { navLinks, WHATSAPP_URL } from "@/data/landing-content-bruxismo";
 import { Container } from "../Container";
+import { BookingWidget } from "@/components/BookingWidget";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -142,7 +143,7 @@ export function Header() {
 
       {/* Mobile Overlay */}
       <div
-        className={`fixed inset-0 bg-white z-[99] flex flex-col justify-center items-center space-y-6 transition-all duration-400 lg:hidden ${
+        className={`fixed inset-0 bg-white z-[99] flex flex-col items-center overflow-y-auto px-6 pt-24 pb-12 space-y-6 transition-all duration-400 lg:hidden ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -156,13 +157,21 @@ export function Header() {
             {link.label}
           </a>
         ))}
+
+        {/* Booking widget */}
+        {menuOpen && (
+          <div className="w-full max-w-md mt-4">
+            <BookingWidget />
+          </div>
+        )}
+
         <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-8 py-4 bg-primary-dark text-white rounded-full text-sm font-bold uppercase tracking-widest mt-6 shadow-lg active:scale-95 transition-transform"
+          className="px-8 py-4 bg-primary-dark text-white rounded-full text-sm font-bold uppercase tracking-widest mt-2 shadow-lg active:scale-95 transition-transform"
         >
-          Agendar consulta
+          Agendar pelo WhatsApp
         </a>
       </div>
     </>
