@@ -96,13 +96,13 @@ export function FinalCTA() {
                 </WhatsAppButton>
 
                 <a
-                  href="https://www.instagram.com/draingridazevedo"
+                  href="https://www.instagram.com/draingrid.azevedo/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl border border-white/20 text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition-all duration-200"
                 >
                   {instagramIcon}
-                  <span>@draingridazevedo</span>
+                  <span>@draingrid.azevedo</span>
                 </a>
               </div>
             </div>

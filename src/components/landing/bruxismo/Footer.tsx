@@ -74,7 +74,7 @@ export function Footer() {
                 {whatsappIcon}
               </a>
               <a
-                href="https://www.instagram.com/draingridazevedo"
+                href="https://www.instagram.com/draingrid.azevedo/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -118,13 +118,13 @@ export function Footer() {
               Falar no WhatsApp
             </a>
             <a
-              href="https://www.instagram.com/draingridazevedo"
+              href="https://www.instagram.com/draingrid.azevedo/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-white/10 text-white/40 text-sm font-semibold hover:border-white/20 hover:text-white/60 transition-all duration-300 w-fit"
             >
               {instagramIcon}
-              @draingridazevedo
+              @draingrid.azevedo
             </a>
           </div>
         </div>
