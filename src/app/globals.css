@@ -35,6 +35,11 @@
   --radius-4xl: 2.5rem;
 }
 
+html, body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 body {
   background: white;
   min-height: 100vh;
