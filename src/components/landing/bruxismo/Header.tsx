@@ -12,49 +12,35 @@ export function Header() {
     const headerEl = document.getElementById("main-header") as HTMLElement | null;
 
     let lastScrollY = window.scrollY;
-    let firstRun = true;
 
     const update = () => {
       const currentScrollY = window.scrollY;
       const isMobile = window.innerWidth < 768;
-
-      if (isMobile) {
-        if (headerEl) {
-          if (firstRun) headerEl.style.transition = "none";
-          headerEl.style.transform = "translateY(0)";
-          headerEl.style.backgroundColor = "white";
-          headerEl.style.borderBottom = currentScrollY > 5 ? "1px solid rgba(26,43,32,0.08)" : "none";
-          headerEl.style.boxShadow = "none";
-          if (firstRun) {
-            requestAnimationFrame(() => {
-              if (headerEl) headerEl.style.transition = "transform 0.35s cubic-bezier(0.4,0,0.2,1), background-color 0.2s, border-bottom 0.2s, box-shadow 0.2s";
-            });
-          }
-        }
-        lastScrollY = currentScrollY;
-        firstRun = false;
-        return;
-      }
-
-      // Desktop: show on scroll up, hide on scroll down
-      const scrollingUp = currentScrollY < lastScrollY;
       const pastHero = currentScrollY > window.innerHeight * 0.9;
 
-      if (headerEl) {
-        headerEl.style.backgroundColor = "rgba(255,255,255,0.98)";
-        headerEl.style.backdropFilter = "blur(8px)";
-        headerEl.style.borderBottom = "1px solid rgba(26,43,32,0.08)";
-        headerEl.style.boxShadow = "0 1px 8px rgba(0,0,0,0.05)";
+      if (!headerEl) return;
 
-        if (scrollingUp && pastHero) {
+      headerEl.style.backgroundColor = "rgba(255,255,255,0.98)";
+      headerEl.style.backdropFilter = "blur(8px)";
+      headerEl.style.borderBottom = "1px solid rgba(26,43,32,0.08)";
+      headerEl.style.boxShadow = "0 1px 8px rgba(0,0,0,0.05)";
+
+      if (isMobile) {
+        // Mobile: hidden over hero, visible after
+        headerEl.style.transform = pastHero ? "translateY(0)" : "translateY(-100%)";
+      } else {
+        // Desktop: hidden over hero; past hero, show on scroll up, hide on scroll down
+        const scrollingUp = currentScrollY < lastScrollY;
+        if (!pastHero) {
+          headerEl.style.transform = "translateY(-100%)";
+        } else if (scrollingUp) {
           headerEl.style.transform = "translateY(0)";
-        } else if (!scrollingUp) {
+        } else {
           headerEl.style.transform = "translateY(-100%)";
         }
       }
 
       lastScrollY = currentScrollY;
-      firstRun = false;
     };
 
     window.addEventListener("scroll", update, { passive: true });

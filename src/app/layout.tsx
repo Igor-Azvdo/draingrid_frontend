@@ -172,6 +172,16 @@ export default function RootLayout({
       </head>
       <body className="text-text antialiased">
         {children}
+        {/* Google tag (gtag.js) */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-7HD7ZV5V29" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7HD7ZV5V29');
+          `}
+        </Script>
         {/* ClinicWeed tracking */}
         <Script src="https://api.clinicweed.com.br/api/t/clw_8fc17d6d58311b45e5813d531bc2fb5f" strategy="afterInteractive" />
       </body>

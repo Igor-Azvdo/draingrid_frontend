@@ -30,11 +30,11 @@ export function Hero() {
       <div className="flex-1 flex flex-col md:flex-row">
 
         {/* Left column */}
-        <div className="flex-[45] flex flex-col px-6 sm:px-10 lg:px-16 xl:px-20 pb-10 md:pb-0">
+        <div className="flex-[45] flex flex-col px-6 sm:px-10 lg:px-16 xl:px-20 pb-6 md:pb-0">
 
           {/* Hero text content */}
-          <div className="flex-1 flex items-center pt-8 md:pt-10 pb-10 md:pb-16">
-            <div className="space-y-7 max-w-xl w-full">
+          <div className="flex-1 flex flex-col items-center justify-center pt-4 md:pt-10 pb-4 md:pb-16">
+            <div className="space-y-4 md:space-y-7 max-w-xl w-full text-center md:text-left md:mx-0 mx-auto">
 
               {/* Large hero logo — fades out as header logo appears (desktop only) */}
               <div
@@ -62,7 +62,7 @@ export function Hero() {
                 {heroContent.description}
               </p>
 
-              <div className="flex flex-row flex-wrap items-center gap-3">
+              <div className="flex flex-row flex-wrap items-center justify-center gap-3 w-full max-w-lg mx-auto md:mx-0 md:justify-start">
                 <WhatsAppButton variant="green">
                   Agendar Consulta
                 </WhatsAppButton>
@@ -82,12 +82,12 @@ export function Hero() {
         </div>
 
         {/* Right column — image */}
-        <div className="flex-[55] flex flex-col px-4 sm:px-6 lg:px-8 pb-6 pt-6 md:pt-0 md:pb-0">
+        <div className="flex-[55] flex flex-col px-4 sm:px-6 lg:px-8 pb-4 pt-4 md:pt-0 md:pb-0 order-first md:order-none">
           <div className="relative flex-1 rounded-[2rem] md:rounded-none md:rounded-tl-[3rem] md:rounded-bl-[3rem] overflow-hidden min-h-[320px]">
             <picture>
-              <source media="(min-width: 768px)" srcSet="/herobglp.jpg" />
+              <source media="(min-width: 768px)" srcSet="/herobruxismo.jpg" />
               <img
-                src="/herobglpmobile.jpg"
+                src="/herobruxismo.jpg"
                 alt="Dra. Ingrid Azevedo, dentista e prescritora canábica"
                 className="absolute inset-0 w-full h-full object-cover object-[center_top]"
                 loading="eager"

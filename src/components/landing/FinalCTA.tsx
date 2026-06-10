@@ -13,12 +13,10 @@ export function FinalCTA() {
             <div className="absolute bottom-0 right-0 w-60 h-60 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3" />
 
             <div className="relative z-10 space-y-6">
-              <p className="text-2xl md:text-4xl font-extrabold text-white leading-snug">
-                {finalCtaContent.text[0]}
-              </p>
-              <p className="text-base md:text-lg text-white/60 font-light leading-relaxed max-w-xl mx-auto">
-                {finalCtaContent.text[1]}
-              </p>
+              <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-extrabold text-white leading-[1.1]">
+                Agende a sua<br />
+                consulta <span className="text-white/70">agora.</span>
+              </h2>
               <div className="pt-4">
                 <WhatsAppButton variant="white">
                   {finalCtaContent.cta}

@@ -10,7 +10,6 @@ import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Conditions } from "@/components/landing/Conditions";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { FAQ } from "@/components/landing/FAQ";
-import { Plans } from "@/components/landing/Plans";
 import { FinalCTA } from "@/components/landing/FinalCTA";
 import { Footer } from "@/components/landing/Footer";
 import { FloatingWhatsApp } from "@/components/landing/FloatingWhatsApp";
@@ -45,7 +44,6 @@ export default function Home() {
         <Conditions />
         <Testimonials />
         <FAQ />
-        <Plans />
         <FinalCTA />
       </main>
       <Footer />

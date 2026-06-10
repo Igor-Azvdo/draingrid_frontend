@@ -23,6 +23,12 @@ export const siteConfig = {
     //   icon: "whatsapp" as const,
     // },
     {
+      label: "Protocolo de tratamento",
+      subtitle: "Bruxismo",
+      url: "https://dentistacanabica.com.br/bruxismo",
+      icon: "website" as const,
+    },
+    {
       label: "Website",
       url: "/",
       icon: "website" as const,

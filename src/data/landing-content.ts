@@ -198,10 +198,6 @@ export const plansContent = {
 };
 
 export const finalCtaContent = {
-  text: [
-    "Você chegou até aqui porque a dor já durou tempo demais.",
-    "Não ofereço milagre. Ofereço protocolo, acompanhamento e uma profissional que já esteve do outro lado.",
-  ],
   cta: "Agendar minha consulta",
 };
 
