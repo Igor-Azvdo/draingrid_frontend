@@ -50,7 +50,7 @@ export function FinalCTA() {
   }, []);
 
   return (
-    <section className="relative bg-[#2d5c3e]">
+    <section data-track-section="cta-final" className="relative bg-[#2d5c3e]">
       {/* Grain */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -91,7 +91,7 @@ export function FinalCTA() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <WhatsAppButton variant="white">
+                <WhatsAppButton variant="white" trackClick="cta-final">
                   Falar no WhatsApp
                 </WhatsAppButton>
 

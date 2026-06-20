@@ -71,6 +71,7 @@ export function LinkCard({ link }: { link: LinkItem }) {
       href={link.url}
       target="_blank"
       rel="noopener noreferrer"
+      data-track-click={link.trackClick}
       className={`group relative flex items-center gap-4 w-full px-5 py-3.5 ${squircle}
         bg-white/5 border-2 border-primary backdrop-blur-sm
         hover:bg-primary/20 hover:border-primary-light hover:shadow-[0_0_20px_rgba(107,158,116,0.4)]

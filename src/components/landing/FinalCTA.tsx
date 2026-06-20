@@ -4,7 +4,7 @@ import { finalCtaContent } from "@/data/landing-content";
 
 export function FinalCTA() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section data-track-section="cta-final" className="py-24 md:py-32 bg-white">
       <Container>
         <div className="relative max-w-3xl mx-auto">
           <div className="relative bg-primary-dark rounded-[3rem] px-8 py-16 md:px-16 md:py-20 text-center overflow-hidden">
@@ -18,7 +18,7 @@ export function FinalCTA() {
                 consulta <span className="text-white/70">agora.</span>
               </h2>
               <div className="pt-4">
-                <WhatsAppButton variant="white">
+                <WhatsAppButton variant="white" trackClick="cta-final">
                   {finalCtaContent.cta}
                 </WhatsAppButton>
               </div>

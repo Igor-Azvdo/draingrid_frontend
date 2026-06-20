@@ -5,6 +5,7 @@ export interface LinkItem {
   icon: "whatsapp" | "instagram" | "website";
   disabled?: boolean;
   disclaimer?: string;
+  trackClick?: string;
 }
 
 export const siteConfig = {
@@ -15,6 +16,7 @@ export const siteConfig = {
       label: "Cannabis Medicinal",
       url: "https://wa.me/5511985827582",
       icon: "whatsapp" as const,
+      trackClick: "link-cannabis-medicinal",
     },
     // {
     //   label: "Odontologia",
@@ -27,11 +29,13 @@ export const siteConfig = {
       subtitle: "Bruxismo",
       url: "https://dentistacanabica.com.br/bruxismo",
       icon: "website" as const,
+      trackClick: "link-protocolo-bruxismo",
     },
     {
       label: "Website",
       url: "/",
       icon: "website" as const,
+      trackClick: "link-website",
     },
   ] satisfies LinkItem[],
 };

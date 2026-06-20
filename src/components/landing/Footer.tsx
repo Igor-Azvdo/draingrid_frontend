@@ -14,7 +14,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-primary-dark text-white">
+    <footer data-track-section="footer" className="bg-primary-dark text-white">
       {/* Top section */}
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 pt-20 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12">
@@ -37,6 +37,7 @@ export function Footer() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track-click="cta-footer-whatsapp"
                 aria-label="WhatsApp"
                 className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:bg-white hover:text-primary-dark transition-all duration-300 group"
               >

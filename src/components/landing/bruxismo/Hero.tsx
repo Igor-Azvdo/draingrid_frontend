@@ -26,7 +26,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="bg-white overflow-hidden min-h-screen flex flex-col">
+    <section data-track-section="hero" className="bg-white overflow-hidden min-h-screen flex flex-col">
       <div className="flex-1 flex flex-col md:flex-row">
 
         {/* Left column */}
@@ -63,12 +63,13 @@ export function Hero() {
               </p>
 
               <div className="flex flex-row flex-wrap items-center justify-center gap-3 w-full max-w-lg mx-auto md:mx-0 md:justify-start">
-                <WhatsAppButton variant="green">
+                <WhatsAppButton variant="green" trackClick="cta-hero">
                   Agendar Consulta
                 </WhatsAppButton>
 
                 <a
                   href="#como-funciona"
+                  data-track-click="cta-como-funciona"
                   className="inline-flex items-center gap-2 px-6 py-[13px] rounded-xl border border-text/20 text-[12px] font-bold tracking-[0.1em] uppercase text-text/65 hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
                 >
                   Como funciona

@@ -3,7 +3,7 @@ import { conditionsContent } from "@/data/landing-content";
 
 export function Conditions() {
   return (
-    <section className="py-24 bg-white scroll-mt-24">
+    <section data-track-section="condicoes" className="py-24 bg-white scroll-mt-24">
       <Container>
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center text-center mb-20">

@@ -14,7 +14,7 @@ const cardContent = (
     <p className="text-text/55 text-base leading-relaxed mb-7">
       A placa protege o esmalte. Mas o bruxismo vem do sistema nervoso — e a cannabis medicinal é o tratamento que chega lá. Regulamentada pela ANVISA. Prescrita por dentista. Entregue em casa.
     </p>
-    <WhatsAppButton variant="green">
+    <WhatsAppButton variant="green" trackClick="cta-problema">
       Quero entender meu tratamento
     </WhatsAppButton>
   </>
@@ -22,7 +22,7 @@ const cardContent = (
 
 export function Problem() {
   return (
-    <section className="py-16 scroll-mt-24">
+    <section data-track-section="problema" className="py-16 scroll-mt-24">
       <Container>
 
         {/* Mobile: image on top, card below */}

@@ -26,7 +26,7 @@ export default function Link2() {
           </div>
 
           {/* Links */}
-          <div className="w-full flex flex-col gap-3">
+          <div data-track-section="links" className="w-full flex flex-col gap-3">
             {siteConfig.links.map((link, index) => (
               <div
                 key={index}
@@ -39,7 +39,7 @@ export default function Link2() {
           </div>
 
           {/* Booking widget */}
-          <div className="w-full animate-fade-up" style={{ animationDelay: `${(siteConfig.links.length + 1) * 120}ms` }}>
+          <div data-track-section="agendamento" className="w-full animate-fade-up" style={{ animationDelay: `${(siteConfig.links.length + 1) * 120}ms` }}>
             <p className="text-center text-xs font-semibold text-white/30 uppercase tracking-widest mb-3">
               Agendar consulta
             </p>

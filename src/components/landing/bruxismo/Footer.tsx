@@ -19,7 +19,7 @@ const instagramIcon = (
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#080f0a] text-white overflow-hidden" style={{ fontFamily: "var(--font-urbanist), sans-serif" }}>
+    <footer data-track-section="footer" className="relative bg-[#080f0a] text-white overflow-hidden" style={{ fontFamily: "var(--font-urbanist), sans-serif" }}>
 
       {/* Grain overlay */}
       <div
@@ -112,6 +112,7 @@ export function Footer() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              data-track-click="cta-footer-whatsapp"
               className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-primary/15 border border-primary/30 text-primary-light text-sm font-semibold hover:bg-primary/25 hover:border-primary/50 transition-all duration-300 w-fit"
             >
               {whatsappIcon}

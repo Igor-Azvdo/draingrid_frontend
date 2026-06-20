@@ -4,7 +4,7 @@ import { stepsContent } from "@/data/landing-content";
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="pt-16 pb-24 bg-white scroll-mt-24">
+    <section id="como-funciona" data-track-section="como-funciona" className="pt-16 pb-24 bg-white scroll-mt-24">
       <Container>
         {/* Header: texto à esquerda, botão à direita */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-16">
@@ -20,7 +20,7 @@ export function HowItWorks() {
             </p>
           </div>
           <div className="shrink-0">
-            <WhatsAppButton variant="green">
+            <WhatsAppButton variant="green" trackClick="cta-como-funciona-secao">
               Agendar minha consulta
             </WhatsAppButton>
           </div>

@@ -4,7 +4,7 @@ import { testimonialsContent } from "@/data/landing-content";
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-section-green-soft md:rounded-[4rem] mx-0 md:mx-6 mb-6 scroll-mt-24 overflow-hidden">
+    <section data-track-section="depoimentos" className="py-24 bg-section-green-soft md:rounded-[4rem] mx-0 md:mx-6 mb-6 scroll-mt-24 overflow-hidden">
       <Container>
         <div className="flex flex-col items-center text-center mb-16 gap-6">
           <div className="inline-block px-4 py-1.5 rounded-full border border-card-border bg-bg text-[10px] font-bold tracking-[0.2em] uppercase text-primary-dark">
@@ -55,7 +55,7 @@ export function Testimonials() {
         </p>
 
         <div className="mt-10 text-center">
-          <WhatsAppButton variant="green">
+          <WhatsAppButton variant="green" trackClick="cta-depoimentos">
             Agendar minha consulta
           </WhatsAppButton>
         </div>

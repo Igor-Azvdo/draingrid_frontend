@@ -109,6 +109,7 @@ export function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              data-track-click="cta-header"
               className="inline-flex group items-center rounded-full pl-5 pr-1.5 py-1.5 bg-primary-dark text-white hover:bg-primary transition-all duration-300 shadow-sm"
             >
               <span className="text-[11px] font-bold uppercase tracking-[0.15em] mr-4">
@@ -169,6 +170,7 @@ export function Header() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
+          data-track-click="cta-menu-mobile"
           className="px-8 py-4 bg-primary-dark text-white rounded-full text-sm font-bold uppercase tracking-widest mt-2 shadow-lg active:scale-95 transition-transform"
         >
           Agendar pelo WhatsApp

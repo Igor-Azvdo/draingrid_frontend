@@ -3,7 +3,7 @@ import { painPoints } from "@/data/landing-content-newhomepage";
 
 export function PainPoints() {
   return (
-    <section className="bg-white scroll-mt-24">
+    <section data-track-section="dores" className="bg-white scroll-mt-24">
       <Container className="py-20">
         <div className="flex flex-col md:flex-row items-stretch gap-10 lg:gap-16">
 

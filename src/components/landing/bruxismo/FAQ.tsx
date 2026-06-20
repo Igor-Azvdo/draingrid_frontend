@@ -8,7 +8,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="duvidas" className="py-24 bg-section-green-soft scroll-mt-24" style={{ fontFamily: "var(--font-urbanist), sans-serif" }}>
+    <section id="duvidas" data-track-section="perguntas-frequentes" className="py-24 bg-section-green-soft scroll-mt-24" style={{ fontFamily: "var(--font-urbanist), sans-serif" }}>
       <Container>
         <div className="flex flex-col md:flex-row gap-16">
           {/* Left: title */}

@@ -4,7 +4,7 @@ import { heroContent } from "@/data/landing-content";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section data-track-section="hero" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background images — mobile vs desktop (LCP-optimized) */}
       <picture className="absolute inset-0 block">
         <source media="(min-width: 768px)" srcSet="/herobglp.jpg" />
@@ -36,7 +36,7 @@ export function Hero() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
-              <WhatsAppButton variant="green">
+              <WhatsAppButton variant="green" trackClick="cta-hero">
                 {heroContent.cta}
               </WhatsAppButton>
             </div>

@@ -17,6 +17,7 @@ export function FloatingWhatsApp() {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
+      data-track-click="cta-flutuante"
       className={`fixed bottom-6 right-6 z-50 inline-flex items-center gap-3 bg-[#25D366] text-white rounded-full pl-5 pr-3 py-3 shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_30px_rgba(37,211,102,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 ${
         visible
           ? "translate-y-0 opacity-100"

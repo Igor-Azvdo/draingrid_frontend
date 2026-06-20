@@ -4,7 +4,7 @@ import { cannabisContent } from "@/data/landing-content";
 
 export function WhatIsCannabis() {
   return (
-    <section className="pt-24 pb-0 bg-white scroll-mt-24">
+    <section data-track-section="o-que-e-cannabis" className="pt-24 pb-0 bg-white scroll-mt-24">
       <Container>
         <div className="flex flex-col md:flex-row-reverse items-stretch gap-16">
           {/* Image */}

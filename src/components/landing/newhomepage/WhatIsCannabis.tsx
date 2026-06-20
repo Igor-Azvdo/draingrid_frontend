@@ -17,7 +17,7 @@ function Bold({ text }: { text: string }) {
 
 export function WhatIsCannabis() {
   return (
-    <section className="bg-white scroll-mt-24">
+    <section data-track-section="o-que-e-cannabis" className="bg-white scroll-mt-24">
       <Container className="py-24">
         <div className="flex flex-col md:flex-row-reverse items-center gap-16">
           {/* Image */}

@@ -10,10 +10,12 @@ export function WhatsAppButton({
   children,
   variant = "green",
   className = "",
+  trackClick,
 }: {
   children: React.ReactNode;
   variant?: "green" | "white" | "outline";
   className?: string;
+  trackClick?: string;
 }) {
   const base =
     "group relative inline-flex items-center rounded-full transition-all duration-300 cursor-pointer uppercase active:scale-95";
@@ -35,6 +37,7 @@ export function WhatsAppButton({
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
+      data-track-click={trackClick}
       className={`${variants[variant]} ${className}`}
     >
       <span className="flex items-center gap-3 mr-4">

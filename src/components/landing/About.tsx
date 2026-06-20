@@ -9,6 +9,7 @@ export function About() {
   return (
     <section
       id="sobre"
+      data-track-section="sobre"
       className="py-24 bg-section-green-soft md:rounded-[4rem] mx-0 md:mx-6 mb-6 scroll-mt-24"
     >
       <Container>
@@ -70,7 +71,7 @@ export function About() {
                 </div>
               ))}
             </div>
-            <WhatsAppButton variant="green">
+            <WhatsAppButton variant="green" trackClick="cta-sobre">
               Agendar minha consulta
             </WhatsAppButton>
           </div>
