@@ -11,12 +11,12 @@ export const heroContent = {
 export const painPoints = {
   title: "Você se reconhece aqui?",
   items: [
-    "Acorda às 3h e não dorme mais",
-    "Mandíbula travada toda manhã",
-    "Toma remédio para dormir e ainda acorda cansado",
-    "Já fez placa de bruxismo, botox, ansiolítico — e continua igual",
-    "Tem dores que os exames não encontram",
-    "Está em polimedicação e se sentindo cada vez pior",
+    { icon: "moon", text: "Acorda às 3h e não dorme mais", image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" },
+    { icon: "jaw", text: "Mandíbula travada toda manhã", image: "https://images.unsplash.com/photo-1616091216791-a5360b5fc78a?auto=format&fit=crop&w=600&q=80" },
+    { icon: "pill", text: "Toma remédio para dormir e ainda acorda cansado", image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" },
+    { icon: "repeat", text: "Já fez placa de bruxismo, botox, ansiolítico — e continua igual", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" },
+    { icon: "search", text: "Tem dores que os exames não encontram", image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80" },
+    { icon: "stack", text: "Está em polimedicação e se sentindo cada vez pior", image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=600&q=80" },
   ],
   closing:
     "Se sim: você não é um caso sem solução. Você é um caso sem o protocolo certo.",
@@ -101,6 +101,10 @@ export const conditionsContent = {
       name: "Neurodesenvolvimento",
       items: ["Autismo (TEA)", "TDAH", "Seletividade alimentar em crianças"],
     },
+    // {
+    //   name: "Odontologia específica",
+    //   items: ["Fobia de dentista", "Síndrome da ardência bucal", "Bruxismo sem resposta a tratamentos convencionais"],
+    // },
     {
       name: "Outros",
       items: ["Dependência de tabaco", "Desmame assistido de medicação convencional"],
@@ -161,18 +165,45 @@ export const faqContent = {
   ],
 };
 
-export const finalCtaContent = {
-  text: [
-    "A medicina convencional te deu a dose média. Você precisa da sua.",
-    "Se você já tentou de tudo e continua no mesmo lugar, talvez nunca tenha sido tratado de verdade — só medicado pela média.",
-    "Quem encontra a dose certa, muda de vida.",
+export const plansContent = {
+  title: "Os Planos",
+  subtitle: "A consulta é a porta de entrada. O produto real é o acompanhamento.",
+  plans: [
+    {
+      name: "Base",
+      duration: "1 mês",
+      audience: "Quem quer começar com segurança",
+      includes: "Consulta + 4 encontros semanais",
+      features: ["Acompanhamento semanal", "Renovação da receita"],
+      highlighted: false,
+    },
+    {
+      name: "Completo",
+      duration: "6 meses",
+      audience: "TEA, fibromialgia, desmame",
+      includes: "Protocolo completo + prioridade",
+      features: ["Tudo do plano Base", "Até 3 consultas inclusas", "Acompanhamento semanal", "Renovação da receita"],
+      highlighted: true,
+    },
+    {
+      name: "Transformação",
+      duration: "1 ano",
+      audience: "Condições complexas e crônicas",
+      includes: "Revisões trimestrais + ajustes sazonais",
+      features: ["Tudo do plano Completo", "Até 6 consultas inclusas", "Acompanhamento semanal", "Renovação da receita"],
+      highlighted: false,
+    },
   ],
+  closing: "Não sabe qual plano é o certo? Na consulta, definimos juntos.",
+};
+
+export const finalCtaContent = {
   cta: "Agendar minha consulta",
 };
 
 export const navLinks = [
   { label: "Sobre", href: "#sobre" },
   { label: "Como funciona", href: "#como-funciona" },
-  { label: "Indicações", href: "#indicacoes" },
+  { label: "Planos", href: "#planos" },
   { label: "Dúvidas", href: "#duvidas" },
 ];

@@ -1,47 +1,81 @@
 "use client";
 
 import { useState } from "react";
-import { Container } from "../Container";
+import { Container } from "./Container";
 import { faqContent } from "@/data/landing-content-newhomepage";
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="duvidas" data-track-section="perguntas-frequentes" className="py-24 bg-section-green-soft scroll-mt-24" style={{ fontFamily: "var(--font-urbanist), sans-serif" }}>
+    <section id="duvidas" data-track-section="perguntas-frequentes" className="py-24 bg-white scroll-mt-24">
       <Container>
-        <div className="flex flex-col md:flex-row gap-16">
-          {/* Left: title */}
-          <div className="md:w-1/3 shrink-0">
-            <h2 className="text-6xl md:text-7xl font-extrabold text-text leading-none tracking-tight">
-              Dúvidas
+        <div className="max-w-3xl mx-auto">
+          <div className="flex flex-col items-center text-center mb-16">
+            <div className="inline-block px-5 py-2 rounded-full border border-card-border bg-bg text-xs font-bold tracking-widest uppercase text-primary-dark mb-6">
+              FAQ
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-text">
+              Tire suas <span className="text-highlight-dark">dúvidas</span>
             </h2>
-            <p className="text-text/40 text-base mt-3">Perguntas frequentes</p>
           </div>
 
-          {/* Right: accordion */}
-          <div className="flex-1 border-t border-text/10">
+          <div className="space-y-4">
             {faqContent.items.map((item, i) => {
               const isOpen = openIndex === i;
               return (
-                <div key={i} className="border-b border-text/10">
+                <div
+                  key={i}
+                  className={`rounded-[2rem] overflow-hidden transition-all duration-500 border ${
+                    isOpen
+                      ? "bg-primary-dark border-primary-dark text-white shadow-xl"
+                      : "bg-white border-card-border hover:border-primary/30"
+                  }`}
+                >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between py-6 text-left gap-6"
+                    className="w-full flex items-center justify-between p-5 text-left"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-semibold text-xl text-text leading-snug">
+                    <span
+                      className={`font-bold text-base md:text-lg ${
+                        isOpen ? "text-white" : "text-text"
+                      }`}
+                    >
                       {item.question}
                     </span>
-                    <div className="w-7 h-7 rounded-full border border-text/20 flex items-center justify-center shrink-0 transition-colors duration-200">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-text/40 transition-transform duration-300" style={{ transform: isOpen ? "rotate(45deg)" : "none" }}>
-                        <path d="M12 5v14" />
-                        <path d="M5 12h14" />
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center border shrink-0 transition-transform duration-300 ${
+                        isOpen
+                          ? "border-white/20 text-white rotate-180"
+                          : "border-card-border text-text/40"
+                      }`}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      >
+                        <path d="m6 9 6 6 6-6" />
                       </svg>
                     </div>
                   </button>
-                  <div className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${isOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}>
-                    <p className="text-text/50 text-lg leading-relaxed pb-6">{item.answer}</p>
+                  <div
+                    className={`transition-[max-height,opacity] duration-500 ease-in-out overflow-hidden ${
+                      isOpen
+                        ? "max-h-[400px] opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="px-5 pb-5 border-t border-white/10">
+                      <p className="text-white/70 leading-relaxed pt-4">
+                        {item.answer}
+                      </p>
+                    </div>
                   </div>
                 </div>
               );

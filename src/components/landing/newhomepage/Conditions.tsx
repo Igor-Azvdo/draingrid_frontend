@@ -1,9 +1,9 @@
-import { Container } from "../Container";
+import { Container } from "./Container";
 import { conditionsContent } from "@/data/landing-content-newhomepage";
 
 export function Conditions() {
   return (
-    <section id="indicacoes" data-track-section="condicoes" className="py-24 bg-white scroll-mt-24">
+    <section data-track-section="condicoes" className="py-24 bg-white scroll-mt-24">
       <Container>
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center text-center mb-20">

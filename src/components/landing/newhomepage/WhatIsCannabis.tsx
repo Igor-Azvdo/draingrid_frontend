@@ -1,30 +1,17 @@
 import Image from "next/image";
-import { Container } from "../Container";
+import { Container } from "./Container";
 import { cannabisContent } from "@/data/landing-content-newhomepage";
-
-function Bold({ text }: { text: string }) {
-  const parts = text.split(/\*\*(.+?)\*\*/g);
-  return (
-    <>
-      {parts.map((part, i) =>
-        i % 2 === 1
-          ? <strong key={i} className="font-medium text-text/80">{part}</strong>
-          : <span key={i}>{part}</span>
-      )}
-    </>
-  );
-}
 
 export function WhatIsCannabis() {
   return (
-    <section data-track-section="o-que-e-cannabis" className="bg-white scroll-mt-24">
-      <Container className="py-24">
-        <div className="flex flex-col md:flex-row-reverse items-center gap-16">
+    <section data-track-section="o-que-e-cannabis" className="pt-24 pb-0 bg-white scroll-mt-24">
+      <Container>
+        <div className="flex flex-col md:flex-row-reverse items-stretch gap-16">
           {/* Image */}
           <div className="w-full md:w-5/12">
             <div className="h-full rounded-[3rem] overflow-hidden shadow-2xl relative border-8 border-white">
               <Image
-                src="/cannabis-man.jpg"
+                src="/hero.jpg"
                 alt="Cannabis Medicinal"
                 width={600}
                 height={700}
@@ -45,8 +32,8 @@ export function WhatIsCannabis() {
               </span>
             </h2>
             <div className="text-text/60 text-base font-light leading-relaxed space-y-4">
-              <p><Bold text={cannabisContent.intro} /></p>
-              <p><Bold text={cannabisContent.body} /></p>
+              <p>{cannabisContent.intro}</p>
+              <p>{cannabisContent.body}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -68,7 +55,6 @@ export function WhatIsCannabis() {
           </div>
         </div>
       </Container>
-
     </section>
   );
 }

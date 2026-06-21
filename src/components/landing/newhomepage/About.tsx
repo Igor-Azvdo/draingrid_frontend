@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Container } from "../Container";
+import { Container } from "./Container";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { aboutContent } from "@/data/landing-content-newhomepage";
 
@@ -10,23 +10,23 @@ export function About() {
     <section
       id="sobre"
       data-track-section="sobre"
-      className="py-16 mt-16 bg-section-green-soft md:rounded-[4rem] mx-0 md:mx-6 mb-6 scroll-mt-24"
+      className="py-24 bg-section-green-soft md:rounded-[4rem] mx-0 md:mx-6 mb-6 scroll-mt-24"
     >
       <Container>
-        <div className="flex flex-col md:flex-row items-center gap-11">
+        <div className="flex flex-col md:flex-row items-stretch gap-16">
           {/* Photo */}
           <div className="w-full md:w-5/12">
-            <div className="rounded-[2rem] overflow-hidden shadow-xl relative border-4 border-white md:max-h-[650px]">
+            <div className="h-full rounded-[3rem] overflow-hidden shadow-2xl relative border-8 border-white">
               <Image
                 src="/dra-ingrid.jpg"
                 alt="Dra. Ingrid Azevedo"
                 width={400}
                 height={500}
-                className="w-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg max-w-[180px]">
-                <p className="font-extrabold text-base text-text">Dra. Ingrid</p>
-                <p className="text-[10px] text-text/50 uppercase font-bold tracking-[0.2em] mt-0.5">
+              <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-3xl shadow-lg max-w-[200px]">
+                <p className="font-extrabold text-xl text-text">Dra. Ingrid</p>
+                <p className="text-[10px] text-text/50 uppercase font-bold tracking-[0.2em] mt-1">
                   Prescritora Canábica
                 </p>
               </div>
@@ -34,14 +34,14 @@ export function About() {
           </div>
 
           {/* Text */}
-          <div className="w-full md:w-7/12 space-y-6">
+          <div className="w-full md:w-7/12 space-y-8">
             <div className="inline-block px-4 py-1.5 rounded-full border border-card-border bg-white text-[10px] font-bold tracking-[0.2em] uppercase text-primary-dark">
               Sobre mim
             </div>
-            <h2 className="text-4xl md:text-[3.2rem] font-extrabold text-text leading-tight">
+            <h2 className="text-4xl md:text-6xl font-extrabold text-text leading-tight">
               {aboutContent.title}
             </h2>
-            <div className="text-text/60 text-base font-light leading-relaxed space-y-3">
+            <div className="text-text/60 text-base font-light leading-relaxed space-y-4">
               {aboutContent.paragraphs.map((p, i) => (
                 <p
                   key={i}
@@ -55,10 +55,10 @@ export function About() {
                 </p>
               ))}
             </div>
-            <p className="text-text/40 text-xs italic">
+            <p className="text-text/40 text-sm italic">
               {aboutContent.credentials}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {aboutContent.badges.map((badge) => (
                 <div
                   key={badge}
