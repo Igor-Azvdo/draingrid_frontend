@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "../Container";
 import { WhatsAppButton } from "./WhatsAppButton";
+import { problemContent } from "@/data/landing-content-newhomepage";
 
 const cardContent = (
   <>
@@ -8,14 +9,14 @@ const cardContent = (
       ainda há esperança
     </div>
     <h2 className="text-3xl md:text-4xl font-extrabold text-text leading-tight mb-4">
-      Vamos tratar a origem,{" "}
-      <span className="text-primary-dark">não o sintoma.</span>
+      {problemContent.title}{" "}
+      <span className="text-primary-dark">{problemContent.highlight}</span>
     </h2>
-    <p className="text-text/55 text-base leading-relaxed mb-7">
-      A placa protege o esmalte. Mas o bruxismo vem do sistema nervoso — e a cannabis medicinal é o tratamento que chega lá. Regulamentada pela ANVISA. Prescrita por dentista. Entregue em casa.
+    <p className="text-text/55 text-base leading-relaxed mb-7 whitespace-pre-line">
+      {problemContent.body}
     </p>
     <WhatsAppButton variant="green" trackClick="cta-problema">
-      Quero entender meu tratamento
+      Quero encontrar a minha dose
     </WhatsAppButton>
   </>
 );
@@ -30,7 +31,7 @@ export function Problem() {
           <div className="relative h-[280px] w-full">
             <Image
               src="/problem-hero.jpg"
-              alt="Tratamento para bruxismo com cannabis medicinal"
+              alt="Cannabis medicinal — Dra. Ingrid Azevedo"
               fill
               className="object-cover object-top"
             />
@@ -46,7 +47,7 @@ export function Problem() {
             <div className="w-[52%] relative">
               <Image
                 src="/problem-hero.jpg"
-                alt="Tratamento para bruxismo com cannabis medicinal"
+                alt="Cannabis medicinal — Dra. Ingrid Azevedo"
                 fill
                 className="object-cover object-top"
               />

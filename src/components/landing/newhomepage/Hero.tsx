@@ -53,9 +53,8 @@ export function Hero() {
                 />
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold leading-[1.1] tracking-tight">
-                <span className="text-primary">Bruxismo não é problema de dente.</span>{" "}
-                <span className="text-text">É um pedido de socorro do sistema nervoso.</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold leading-[1.1] tracking-tight text-text">
+                {heroContent.title}
               </h1>
 
               <p className="text-sm text-text/55 leading-relaxed max-w-md">
@@ -86,9 +85,9 @@ export function Hero() {
         <div className="flex-[55] flex flex-col px-4 sm:px-6 lg:px-8 pb-4 pt-4 md:pt-0 md:pb-0 order-first md:order-none">
           <div className="relative flex-1 rounded-[2rem] md:rounded-none md:rounded-tl-[3rem] md:rounded-bl-[3rem] overflow-hidden min-h-[320px]">
             <picture>
-              <source media="(min-width: 768px)" srcSet="/herobruxismo.jpg" />
+              <source media="(min-width: 768px)" srcSet="/herobglp.jpg" />
               <img
-                src="/herobruxismo.jpg"
+                src="/herobglp.jpg"
                 alt="Dra. Ingrid Azevedo, dentista e prescritora canábica"
                 className="absolute inset-0 w-full h-full object-cover object-[center_top]"
                 loading="eager"

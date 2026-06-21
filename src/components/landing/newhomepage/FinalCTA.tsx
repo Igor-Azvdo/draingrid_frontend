@@ -69,12 +69,13 @@ export function FinalCTA() {
             {/* Left: copy + buttons */}
             <div className="flex-1 space-y-8">
               <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-extrabold text-white leading-[1.1]">
-                Agende a sua<br />
-                consulta <span className="text-white/70">agora.</span>
+                Você já esperou<br />
+                tempo demais pra<br />
+                se sentir <span className="text-white/70">bem.</span>
               </h2>
 
               <p className="text-white text-base md:text-lg leading-relaxed">
-                Uma consulta é suficiente para sair com o protocolo escrito. Sem fila. Sem deslocamento. Online.
+                Uma consulta é suficiente para você sair com um protocolo escrito e um caminho claro — sem fila, sem deslocamento, sem julgamento. Quem encontra a dose certa, muda de vida.
               </p>
 
               <div className="space-y-3">

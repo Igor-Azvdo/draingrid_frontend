@@ -12,7 +12,7 @@ export function PainPoints() {
             <div className="rounded-[2rem] overflow-hidden flex-1 min-h-[220px]">
               <img
                 src="/painpoints-hero.jpg"
-                alt="Paciente com bruxismo"
+                alt="Dra. Ingrid Azevedo, dentista e prescritora canábica"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
