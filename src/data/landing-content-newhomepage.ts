@@ -24,9 +24,9 @@ export const painPoints = {
 };
 
 export const problemContent = {
-  title: "A medicina convencional te deu a dose da média.",
-  highlight: "Mas você não é uma média.",
-  body: "Seu histórico, sua genética, o seu sistema nervoso — tudo isso decide como você responde a um tratamento. O mesmo remédio que não fez nada em um mês pode mudar a sua vida em três, quando a dose é ajustada gota a gota, no seu ritmo, para o seu corpo.\n\nÉ exatamente isso que eu faço: encontro a SUA dose. E é exatamente isso que quase ninguém tem a paciência de fazer.",
+  title: "O problema nunca foi você.",
+  highlight: "Foi a dose errada, no protocolo errado.",
+  body: "Você não falhou nos tratamentos — os tratamentos é que foram genéricos demais para o seu corpo. Seu histórico, sua genética e o seu sistema nervoso decidem como você responde a cada remédio. O mesmo princípio que não fez nada em um mês pode virar a sua vida em três, quando a dose é ajustada gota a gota, no seu ritmo.\n\nÉ isso que eu faço: encontro a SUA dose e te acompanho até ela funcionar. E é justamente isso que quase ninguém tem a paciência de fazer.",
 };
 
 export const cannabisContent = {
