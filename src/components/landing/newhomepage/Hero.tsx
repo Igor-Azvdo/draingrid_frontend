@@ -54,7 +54,8 @@ export function Hero() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold leading-[1.1] tracking-tight text-text">
-                {heroContent.title}
+                Você já tentou de tudo. Só não tentou{" "}
+                <span className="text-primary">a dose certa pra você.</span>
               </h1>
 
               <p className="text-sm text-text/55 leading-relaxed max-w-md">
@@ -62,20 +63,9 @@ export function Hero() {
               </p>
 
               <div className="flex flex-row flex-wrap items-center justify-center gap-3 w-full max-w-lg mx-auto md:mx-0 md:justify-start">
-                <WhatsAppButton variant="green" trackClick="cta-hero">
-                  Agendar Consulta
+                <WhatsAppButton variant="green" size="lg" trackClick="cta-hero">
+                  Fale comigo e tire suas dúvidas
                 </WhatsAppButton>
-
-                <a
-                  href="#como-funciona"
-                  data-track-click="cta-como-funciona"
-                  className="inline-flex items-center gap-2 px-6 py-[13px] rounded-xl border border-text/20 text-[12px] font-bold tracking-[0.1em] uppercase text-text/65 hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
-                >
-                  Como funciona
-                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
@@ -85,9 +75,9 @@ export function Hero() {
         <div className="flex-[55] flex flex-col px-4 sm:px-6 lg:px-8 pb-4 pt-4 md:pt-0 md:pb-0 order-first md:order-none">
           <div className="relative flex-1 rounded-[2rem] md:rounded-none md:rounded-tl-[3rem] md:rounded-bl-[3rem] overflow-hidden min-h-[320px]">
             <picture>
-              <source media="(min-width: 768px)" srcSet="/herobglp.jpg" />
+              <source media="(min-width: 768px)" srcSet="/herobruxismo.jpg" />
               <img
-                src="/herobglp.jpg"
+                src="/herobruxismo.jpg"
                 alt="Dra. Ingrid Azevedo, dentista e prescritora canábica"
                 className="absolute inset-0 w-full h-full object-cover object-[center_top]"
                 loading="eager"

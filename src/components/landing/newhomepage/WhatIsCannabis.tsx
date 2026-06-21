@@ -35,6 +35,7 @@ export function WhatIsCannabis() {
 
           {/* Content */}
           <div className="w-full md:w-7/12 space-y-6">
+            {/* soft delete: título "Cannabis Medicinal / O que é de verdade"
             <div className="inline-block px-4 py-1.5 rounded-full border border-card-border bg-bg text-[10px] font-bold tracking-[0.2em] uppercase text-primary-dark">
               Cannabis Medicinal
             </div>
@@ -44,6 +45,7 @@ export function WhatIsCannabis() {
                 de verdade
               </span>
             </h2>
+            */}
             <div className="text-text/60 text-base font-light leading-relaxed space-y-4">
               <p><Bold text={cannabisContent.intro} /></p>
               <p><Bold text={cannabisContent.body} /></p>

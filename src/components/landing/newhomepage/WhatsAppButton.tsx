@@ -9,21 +9,28 @@ const whatsappIcon = (
 export function WhatsAppButton({
   children,
   variant = "green",
+  size = "md",
   className = "",
   trackClick,
 }: {
   children: React.ReactNode;
   variant?: "green" | "white" | "outline";
+  size?: "md" | "lg";
   className?: string;
   trackClick?: string;
 }) {
   const base =
     "group relative inline-flex items-center rounded-xl transition-all duration-300 cursor-pointer uppercase active:scale-95";
 
+  const sizePad = {
+    md: "pl-6 pr-2 py-2",
+    lg: "pl-8 pr-2.5 py-3.5",
+  };
+
   const variants = {
-    green: `${base} bg-primary-dark text-white pl-6 pr-2 py-2 shadow-xl hover:bg-primary`,
-    white: `${base} bg-white text-text pl-6 pr-2 py-2 shadow-xl hover:bg-white/90`,
-    outline: `${base} bg-transparent border border-primary-dark/30 text-primary-dark pl-6 pr-2 py-2 hover:bg-primary/5 hover:border-primary-dark`,
+    green: `${base} bg-primary-dark text-white shadow-xl hover:bg-primary`,
+    white: `${base} bg-white text-text shadow-xl hover:bg-white/90`,
+    outline: `${base} bg-transparent border border-primary-dark/30 text-primary-dark hover:bg-primary/5 hover:border-primary-dark`,
   };
 
   const circleColors = {
@@ -32,20 +39,23 @@ export function WhatsAppButton({
     outline: "bg-primary/10 text-primary-dark group-hover:bg-primary/20",
   };
 
+  const circleSize = size === "lg" ? "w-12 h-12" : "w-10 h-10";
+  const textSize = size === "lg" ? "text-[15px]" : "text-[12px]";
+
   return (
     <a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       data-track-click={trackClick}
-      className={`${variants[variant]} ${className}`}
+      className={`${variants[variant]} ${sizePad[size]} ${className}`}
     >
       <span className="flex items-center gap-3 mr-4">
         <span className="opacity-80">{whatsappIcon}</span>
-        <span className="text-[12px] font-bold tracking-[0.15em]">{children}</span>
+        <span className={`${textSize} font-bold tracking-[0.15em]`}>{children}</span>
       </span>
       <div
-        className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${circleColors[variant]}`}
+        className={`${circleSize} rounded-xl flex items-center justify-center transition-all ${circleColors[variant]}`}
       >
         <svg
           width="16"
