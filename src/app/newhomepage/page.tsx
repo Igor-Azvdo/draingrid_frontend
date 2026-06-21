@@ -4,7 +4,7 @@ import { Header } from "@/components/landing/newhomepage/Header";
 import { Hero } from "@/components/landing/newhomepage/Hero";
 import { PainPoints } from "@/components/landing/newhomepage/PainPoints";
 import { Problem } from "@/components/landing/newhomepage/Problem";
-import { WhatIsCannabis } from "@/components/landing/newhomepage/WhatIsCannabis";
+// import { WhatIsCannabis } from "@/components/landing/newhomepage/WhatIsCannabis"; // soft delete
 import { About } from "@/components/landing/newhomepage/About";
 import { HowItWorks } from "@/components/landing/newhomepage/HowItWorks";
 import { Testimonials } from "@/components/landing/newhomepage/Testimonials";
@@ -22,7 +22,8 @@ export default function NewHomepageLanding() {
         <Hero />
         <PainPoints />
         <Problem />
-        <WhatIsCannabis />
+        {/* soft delete: seção "O que é de verdade" (Cannabis Medicinal) */}
+        {/* <WhatIsCannabis /> */}
         <HowItWorks />
         <About />
         <Testimonials />
