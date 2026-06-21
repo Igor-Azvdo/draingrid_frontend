@@ -44,13 +44,15 @@ export const cannabisContent = {
 
 export const aboutContent = {
   title: "Dra. Ingrid Azevedo",
+  role: "Cirurgiã-dentista e odontopediatra · Prescritora canábica",
   paragraphs: [
     "Antes de ser prescritora, eu fui paciente.",
     "Passei por um estresse pós-traumático que me deixou ansiosa, deprimida e travada. A cannabis medicinal me devolveu o volante da minha própria vida. Só depois disso eu abri a porta para os meus pacientes — porque eu sei, por dentro, o que é ter a dose certa. E o que é não ter.",
-    "Como dentista, enxergo o que muito prescritor não vê: o corpo grita pelo sistema nervoso. Por isso eu não trato sintoma isolado — trato a origem. E acompanho você de perto, semana a semana, até a sua vida voltar ao lugar. Visitei fazendas de cultivo para saber exatamente o que prescrevo: da semente ao frasco.",
+    "São mais de 10 anos cuidando de gente. Como cirurgiã-dentista e odontopediatra, aprendi a ler o corpo desde a primeira consulta de uma criança até o adulto que já tentou de tudo. Foi a boca que me ensinou uma verdade simples: quase toda dor crônica grita pelo sistema nervoso.",
+    "Por isso eu não trato sintoma isolado — trato a origem, e te acompanho de perto, semana a semana, ajustando a dose até a sua vida voltar ao lugar. Visitei fazendas de cultivo para saber exatamente o que prescrevo: da semente ao frasco.",
   ],
-  credentials: "Cirurgiã-Dentista · CRO PB 11599 · Prescritora Canábica",
-  badges: ["CRO PB 11599", "Prescritora Canábica"],
+  credentials: "Cirurgiã-Dentista e Odontopediatra · CRO PB 11599 · Prescritora Canábica",
+  badges: ["+10 anos de profissão", "Odontopediatra", "CRO PB 11599", "Prescritora Canábica"],
 };
 
 export const stepsContent = {
