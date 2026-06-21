@@ -18,7 +18,7 @@ export function WhatsAppButton({
   trackClick?: string;
 }) {
   const base =
-    "group relative inline-flex items-center rounded-full transition-all duration-300 cursor-pointer uppercase active:scale-95";
+    "group relative inline-flex items-center rounded-xl transition-all duration-300 cursor-pointer uppercase active:scale-95";
 
   const variants = {
     green: `${base} bg-primary-dark text-white pl-6 pr-2 py-2 shadow-xl hover:bg-primary`,
@@ -45,7 +45,7 @@ export function WhatsAppButton({
         <span className="text-[12px] font-bold tracking-[0.15em]">{children}</span>
       </span>
       <div
-        className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${circleColors[variant]}`}
+        className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${circleColors[variant]}`}
       >
         <svg
           width="16"
