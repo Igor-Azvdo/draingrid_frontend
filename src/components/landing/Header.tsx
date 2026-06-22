@@ -83,7 +83,7 @@ export function Header() {
 
           {/* Desktop CTA */}
           <a
-            href={WHATSAPP_URL}
+            href={WHATSAPP_URL} data-cw-shortlink="df902d7c"
             target="_blank"
             rel="noopener noreferrer"
             data-track-click="cta-header"
@@ -184,7 +184,7 @@ export function Header() {
         )}
 
         <a
-          href={WHATSAPP_URL}
+          href={WHATSAPP_URL} data-cw-shortlink="df902d7c"
           target="_blank"
           rel="noopener noreferrer"
           data-track-click="cta-menu-mobile"

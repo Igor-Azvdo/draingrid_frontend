@@ -1,4 +1,4 @@
-export const WHATSAPP_URL = "https://app.clinicweed.com.br/r/df902d7c";
+export const WHATSAPP_URL = "https://wa.me/5583987819876?text=Ol%C3%A1%20quero%20agendar%20uma%20consulta!";
 
 export const heroContent = {
   title:

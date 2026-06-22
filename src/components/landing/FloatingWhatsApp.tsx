@@ -14,7 +14,7 @@ export function FloatingWhatsApp() {
 
   return (
     <a
-      href={WHATSAPP_URL}
+      href={WHATSAPP_URL} data-cw-shortlink="df902d7c"
       target="_blank"
       rel="noopener noreferrer"
       data-track-click="cta-flutuante"

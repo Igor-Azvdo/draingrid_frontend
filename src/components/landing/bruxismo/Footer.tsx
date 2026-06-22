@@ -65,7 +65,7 @@ export function Footer() {
             {/* Social */}
             <div className="flex gap-3">
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_URL} data-cw-shortlink="df902d7c"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -109,7 +109,7 @@ export function Footer() {
               Uma consulta online é suficiente para sair com o protocolo escrito.
             </p>
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_URL} data-cw-shortlink="df902d7c"
               target="_blank"
               rel="noopener noreferrer"
               data-track-click="cta-footer-whatsapp"
