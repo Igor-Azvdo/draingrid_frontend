@@ -13,18 +13,8 @@ export function About() {
       className="py-16 mt-16 bg-section-green-soft md:rounded-[4rem] mx-0 md:mx-6 mb-6 scroll-mt-24"
     >
       <Container>
-        {/* Header: title + role */}
-        <div className="max-w-3xl">
-          <h2 className="text-4xl md:text-[3.4rem] font-extrabold text-text leading-[1.03]">
-            {aboutContent.title}
-          </h2>
-          <p className="mt-3 text-primary-dark font-semibold text-sm md:text-base tracking-wide">
-            {aboutContent.role}
-          </p>
-        </div>
-
         {/* Body: small photo + expanded copy */}
-        <div className="mt-10 flex flex-col md:flex-row items-start gap-10 lg:gap-14">
+        <div className="flex flex-col md:flex-row items-start gap-10 lg:gap-14">
           {/* Photo — smaller, floats alongside text */}
           <div className="w-full max-w-[260px] mx-auto md:mx-0 md:w-[260px] shrink-0 md:sticky md:top-28">
             <div className="relative">
@@ -43,6 +33,16 @@ export function About() {
 
           {/* Text */}
           <div className="flex-1 space-y-5">
+            {/* Title + role — directly above the copy */}
+            <div>
+              <h2 className="text-4xl md:text-[3.4rem] font-extrabold text-text leading-[1.03]">
+                {aboutContent.title}
+              </h2>
+              <p className="mt-3 text-primary-dark font-semibold text-sm md:text-base tracking-wide">
+                {aboutContent.role}
+              </p>
+            </div>
+
             <div className="text-text/65 text-base md:text-lg font-light leading-relaxed space-y-4">
               {aboutContent.paragraphs.map((p, i) => (
                 <p
