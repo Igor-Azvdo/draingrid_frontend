@@ -16,7 +16,7 @@ export function About() {
         {/* Body: small photo + expanded copy */}
         <div className="flex flex-col md:flex-row items-start gap-10 lg:gap-14">
           {/* Photo — smaller, floats alongside text */}
-          <div className="w-full max-w-[260px] mx-auto md:mx-0 md:w-[260px] shrink-0 md:sticky md:top-28">
+          <div className="w-full max-w-[360px] mx-auto md:mx-0 md:w-[360px] shrink-0 md:sticky md:top-28">
             <div className="relative">
               <div className="absolute -inset-2.5 -z-0 rounded-[2rem] bg-primary/15 blur-2xl" aria-hidden />
               <div className="relative z-10 rounded-[1.75rem] overflow-hidden shadow-xl ring-1 ring-white/60 border-4 border-white">
