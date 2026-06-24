@@ -39,21 +39,6 @@ export function About() {
                 />
               </div>
             </div>
-
-            {/* Stat chips under the photo */}
-            <div className="mt-4 flex flex-wrap gap-2 justify-center md:justify-start">
-              {aboutContent.badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-full border border-card-border shadow-sm"
-                >
-                  <svg className="w-3.5 h-3.5 text-primary-dark shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="font-bold text-text text-xs tracking-tight">{badge}</span>
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* Text */}
@@ -70,6 +55,21 @@ export function About() {
                 >
                   {p}
                 </p>
+              ))}
+            </div>
+
+            {/* Credentials chips — after the text */}
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start pt-1">
+              {aboutContent.badges.map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-full border border-card-border shadow-sm"
+                >
+                  <svg className="w-3.5 h-3.5 text-primary-dark shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-bold text-text text-xs tracking-tight">{badge}</span>
+                </span>
               ))}
             </div>
 
