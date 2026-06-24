@@ -73,7 +73,7 @@ export function Hero() {
 
         {/* Right column — image */}
         <div className="flex-[55] flex flex-col px-4 sm:px-6 lg:px-8 pb-4 pt-4 md:pt-0 md:pb-0 order-first md:order-none">
-          <div className="relative flex-1 rounded-[2rem] md:rounded-none md:rounded-tl-[3rem] md:rounded-bl-[3rem] overflow-hidden min-h-[320px]">
+          <div className="relative flex-1 rounded-[2rem] md:rounded-none md:rounded-tl-[3rem] md:rounded-bl-[3rem] overflow-hidden min-h-[60vh] sm:min-h-[65vh] md:min-h-[320px]">
             <picture>
               <source media="(min-width: 768px)" srcSet="/herobruxismo.jpg" />
               <img
