@@ -14,7 +14,7 @@ export function About() {
     >
       <Container>
         {/* Body: small photo + expanded copy */}
-        <div className="flex flex-col md:flex-row items-start gap-10 lg:gap-14">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-start gap-10 lg:gap-14">
           {/* Photo — smaller, floats alongside text */}
           <div className="w-full max-w-[360px] mx-auto md:mx-0 md:w-[360px] shrink-0 md:sticky md:top-28">
             <div className="relative">
